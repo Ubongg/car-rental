@@ -1,5 +1,17 @@
 :root {
-  --primaryColor: red;
+  --primaryColor: rgb(38, 80, 38);
+  --mainBlack: black;
+  --mainWhite: white;
+  --mainGrey: #686868;
+  --light-grey: rgb(224, 222, 222);
+  --primary-red: #bb2525;
+  --light-red: #e66b6b;
+  --line-height: 30px;
+  --spacing: 0.3rem;
+  --mainTransition: all 0.3s linear;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --radius: 0.25rem;
 }
 html,
 body {
@@ -10,9 +22,13 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Ysabeau Infant", sans-serif;
 }
 p,
 a {
   text-decoration: none;
   font-size: 1rem;
+}
+li {
+  list-style: none;
 }

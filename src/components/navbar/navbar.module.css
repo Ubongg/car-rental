@@ -1,0 +1,136 @@
+.navCenter {
+  /* padding: 5px 15px 10px; */
+}
+.navCenterShadow {
+  /* padding: 5px 15px 10px; */
+  /* background: var(--mainWhite); */
+  box-shadow: var(--light-shadow);
+}
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 0.2rem; */
+}
+.navToggle,
+.navToggleShow {
+  font-size: 1.8rem;
+  /* padding-top: 8px; */
+  color: var(--mainGrey);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+/* .navToggle:hover {
+  transform: rotate(90deg);
+} */
+.navToggleShow {
+  color: var(--primary-red);
+}
+.logo {
+  color: var(--primaryColor);
+  font-size: 1.2rem;
+}
+.logo span {
+  color: var(--secColor);
+}
+.links a {
+  color: var(--primaryColor);
+  font-size: 0.9rem;
+  /* font-weight: 600; */
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  /* margin: 3rem 0.5rem; */
+  transition: var(--mainTransition);
+  text-align: start;
+}
+.links a:hover {
+  color: var(--secColor);
+  /* margin-left: 0.7rem; */
+  transition: var(--mainTransition);
+}
+.linksContainer {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+}
+.signIn {
+  display: none;
+}
+/* .log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log a {
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  background: var(--secColor);
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  transition: var(--mainTransition);
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+}
+.log a:hover {
+  color: white;
+  padding: 10px 25px;
+} */
+
+@media screen and (min-width: 768px) {
+  .navHeader {
+    /* padding: 0 10px; */
+  }
+  .links a {
+    /* margin: 3rem 0.8rem; */
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navCenter,
+  .navCenterShadow {
+    /* width: min(120ch, 100% - 4rem);
+    margin-inline: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .navCenterShadow {
+    box-shadow: none;
+  }
+  .navHeader {
+    padding: 0;
+  }
+  .navToggle,
+  .navToggleShow {
+    display: none;
+  }
+  .linksContainer {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding-top: 0;
+    margin-left: 15px;
+  }
+  .links a:hover {
+    color: var(--secColor);
+  }
+  .signIn {
+    display: flex;
+    background: var(--primaryColor);
+    padding: 10px 30px;
+    color: var(--mainWhite);
+    font-size: 0.9rem;
+    border-radius: var(--radius);
+  }
+}
+/* @media screen and (min-width: 1200px) {
+  .navCenter {
+    width: min(133ch, 100% - 4rem);
+  }
+} */
