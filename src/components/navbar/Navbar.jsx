@@ -40,9 +40,12 @@ const links = [
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
   const toggleLinks = () => {
-    setShowLinks(!showLinks);
+    if (window.innerWidth < 1024) {
+      setShowLinks(!showLinks);
+    }
   };
 
   const linksContainerRef = useRef(null);
@@ -57,41 +60,56 @@ const Navbar = () => {
     }
   }, [showLinks]);
 
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+      if (showLinks) {
+        setNavbar(false);
+      }
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <div className={`${showLinks ? styles.navCenterShadow : styles.navCenter}`}>
-      <div className={styles.navHeader}>
-        <Link href="/">
-          <h1 className={styles.logo}>
-            Yubo <br />
-            <span>Rental</span>
-          </h1>
+    <div className={`${navbar ? styles.containerActive : styles.container}`}>
+      <div className={styles.navCenter}>
+        <div className={styles.navHeader}>
+          <Link href="/">
+            <h1 className={styles.logo}>
+              Yubo <br />
+              <span>Rental</span>
+            </h1>
+          </Link>
+          <button
+            className={`${showLinks ? styles.navToggleShow : styles.navToggle}`}
+            onClick={toggleLinks}
+          >
+            {showLinks ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+        <div className={styles.linksContainer} ref={linksContainerRef}>
+          <ul className={styles.links} ref={linksRef}>
+            {links.map((link) => (
+              <li>
+                <Link
+                  key={link.id}
+                  href={link.url}
+                  className={styles.link}
+                  onClick={toggleLinks}
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Link className={styles.signIn} href="/dashboard/login">
+          Sign In
         </Link>
-        <button
-          className={`${showLinks ? styles.navToggleShow : styles.navToggle}`}
-          onClick={toggleLinks}
-        >
-          {showLinks ? <FaTimes /> : <FaBars />}
-        </button>
       </div>
-      <div className={styles.linksContainer} ref={linksContainerRef}>
-        <ul className={styles.links} ref={linksRef}>
-          {links.map((link) => (
-            <li>
-              <Link
-                key={link.id}
-                href={link.url}
-                className={styles.link}
-                onClick={toggleLinks}
-              >
-                {link.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <Link className={styles.signIn} href="/dashboard/login">
-        Sign In
-      </Link>
     </div>
   );
 };

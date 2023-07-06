@@ -7,16 +7,18 @@
   --primary-red: #bb2525;
   --light-red: #e66b6b;
   --line-height: 30px;
-  --spacing: 0.3rem;
+  --spacing: 0.1rem;
   --mainTransition: all 0.3s linear;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --radius: 0.25rem;
+  --smallPadding: 1rem;
 }
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 300vh;
 }
 * {
   box-sizing: border-box;
