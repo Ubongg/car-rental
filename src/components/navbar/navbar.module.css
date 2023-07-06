@@ -1,7 +1,7 @@
 .container,
 .containerActive {
   padding: var(--smallPadding);
-  background: transparent;
+  background: var(--mainWhite);
   position: fixed;
   top: 0;
   left: 0;
@@ -73,6 +73,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .container {
+    background: transparent;
+  }
   .navCenter {
     width: min(120ch, 100% - 4rem);
     margin-inline: auto;
@@ -80,6 +83,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0;
+  }
+  .navHeader {
+    background: transparent;
   }
   .navToggle,
   .navToggleShow {

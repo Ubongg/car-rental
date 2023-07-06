@@ -61,11 +61,13 @@ const Navbar = () => {
   }, [showLinks]);
 
   const changeBackground = () => {
-    if (window.scrollY >= 80) {
+    if (window.innerWidth >= 1024 && window.scrollY >= 80) {
       setNavbar(true);
       if (showLinks) {
         setNavbar(false);
       }
+    } else if (window.innerWidth < 1024 && window.scrollY >= 80) {
+      setNavbar(false);
     } else {
       setNavbar(false);
     }
