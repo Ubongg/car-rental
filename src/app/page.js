@@ -16,7 +16,10 @@ export default function Home() {
         </div>
         <div className={styles.textBx}>
           <h6>We Are Yubo Rentals</h6>
-          <h2>We are the largest leading commercial and luxury cars rental.</h2>
+          <h2>
+            We are the <span>largest</span> leading commercial and luxury cars
+            rental.
+          </h2>
           <p>
             Embark on unforgettable adventures and discover the world in
             unparalleled comfort and style with our fleet of exceptionally

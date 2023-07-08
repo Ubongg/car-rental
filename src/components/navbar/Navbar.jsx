@@ -82,7 +82,7 @@ const Navbar = () => {
           <Link href="/">
             <h1 className={styles.logo}>
               Yubo <br />
-              <span>Rental</span>
+              <span>Rentals</span>
             </h1>
           </Link>
           <button

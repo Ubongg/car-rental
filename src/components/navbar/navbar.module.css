@@ -19,22 +19,26 @@
 }
 .navToggle,
 .navToggleShow {
-  font-size: 1.8rem;
-  color: var(--mainGrey);
-  background: transparent;
+  font-size: 1.3rem;
+  color: var(--mainWhite);
+  background: var(--primaryColor);
   border-color: transparent;
   transition: var(--mainTransition);
   cursor: pointer;
+  padding: 0.25rem 0.5rem 0;
+  transition: var(--mainTransition);
 }
-.navToggleShow {
-  color: var(--primary-red);
+.navToggle:hover,
+.navToggleShow:hover {
+  color: var(--mainBlack);
+  background: transparent;
 }
 .logo {
   color: var(--primaryColor);
   font-size: 1.2rem;
 }
 .logo span {
-  color: var(--secColor);
+  color: var(--mainGrey);
 }
 .links {
   display: flex;
@@ -45,8 +49,8 @@
   gap: 2rem;
 }
 .links a {
-  color: var(--primaryColor);
-  font-size: 0.9rem;
+  color: var(--mainGrey);
+  font-size: 1rem;
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: var(--spacing);

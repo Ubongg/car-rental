@@ -2,7 +2,7 @@
   color: var(--mainWhite);
 }
 .home {
-  padding: 100px var(--smallPadding);
+  padding: 120px var(--smallPadding);
   background: url("/assets/body.jpeg");
   background-position: top;
   background-repeat: no-repeat;
@@ -12,7 +12,68 @@
   width: 100%;
   height: 300px;
   position: relative;
+  margin-bottom: 5px;
 }
 .img {
   object-fit: cover;
+  border-radius: 0.5rem;
+}
+.textBx h6 {
+  color: var(--lightGrey);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.textBx h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+.textBx h2 span {
+  color: var(--primaryColor);
+  letter-spacing: var(--spacing);
+}
+.textBx p {
+  letter-spacing: var(--spacing);
+  line-height: var(--line-height);
+  margin-bottom: 20px;
+}
+.textBx button {
+  border: none;
+  border-radius: var(--radius);
+  margin-bottom: 30px;
+}
+.textBx button a {
+  display: flex;
+  background: var(--primaryColor);
+  padding: 10px 30px;
+  color: var(--mainWhite);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+.number {
+  padding: 30px 30px 10px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.number::before {
+  background: grey;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.number h2 {
+  font-size: 2rem;
+  color: var(--primaryColor);
+  margin-bottom: 5px;
+}
+.number p {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
 }
