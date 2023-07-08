@@ -1,5 +1,5 @@
 :root {
-  --primaryColor: rgb(38, 80, 38);
+  --primaryColor: rgb(105, 145, 56);
   --mainBlack: black;
   --mainWhite: white;
   --mainGrey: #686868;
@@ -12,13 +12,12 @@
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --radius: 0.25rem;
-  --smallPadding: 1rem;
+  --smallPadding: 1.5rem;
 }
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  /* height: 300vh; */
 }
 * {
   box-sizing: border-box;

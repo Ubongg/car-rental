@@ -1,6 +1,6 @@
 .container,
 .containerActive {
-  padding: var(--smallPadding);
+  padding: 15px var(--smallPadding);
   background: var(--mainWhite);
   position: fixed;
   top: 0;
@@ -87,6 +87,9 @@
   .navHeader {
     background: transparent;
   }
+  .logo {
+    color: var(--mainWhite);
+  }
   .navToggle,
   .navToggleShow {
     display: none;
@@ -102,6 +105,7 @@
   .links a {
     padding-top: 0;
     font-size: 0.9rem;
+    color: var(--mainWhite);
   }
   .links a:hover {
     color: var(--secColor);
