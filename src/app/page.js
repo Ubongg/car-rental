@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Car from "@/components/car/Car";
 
 export default function Home() {
   return (
@@ -56,6 +57,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Car body="SUV" name="Jeep Renegade" />
       </div>
     </div>
   );

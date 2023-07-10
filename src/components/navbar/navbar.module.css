@@ -126,7 +126,7 @@
     padding: 10px 30px;
     color: var(--mainWhite);
     font-size: 0.9rem;
-    border-radius: var(--radius);
+    border-radius: var(--small-radius);
     font-weight: 600;
   }
 }
