@@ -100,6 +100,12 @@
   .containerActive .logo {
     color: var(--primaryColor);
   }
+  .logo span {
+    color: var(--lightGrey);
+  }
+  .containerActive .logo span {
+    color: var(--mainGrey);
+  }
   .navToggle,
   .navToggleShow {
     display: none;

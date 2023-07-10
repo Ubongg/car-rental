@@ -57,7 +57,43 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Car body="SUV" name="Jeep Renegade" />
+        <div className={styles.fleets}>
+          <div className={styles.fleetsWrap}>
+            <div className={styles.header}>
+              <h2>Our Vehicle Fleet</h2>
+              <p>
+                Driving your dreams to reality with an exquisite fleet of
+                versatile vehicles for unforgettable journeys.
+              </p>
+            </div>
+            <div className={styles.fleet}>
+              <Car
+                body="SUV"
+                name="Jeep Renegade"
+                img="/assets/car1.jpeg"
+                price="$152"
+              />
+              <Car
+                body="Sedan"
+                name="BMW M5"
+                img="/assets/car12.jpeg"
+                price="$159"
+              />
+              <Car
+                body="Exotic Car"
+                name="Ferarri Enzo"
+                img="/assets/car3.jpeg"
+                price="$545"
+              />
+              <Car
+                body="Pickup Truck"
+                name="Ford Raptor"
+                img="/assets/car4.jpeg"
+                price="$144"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
