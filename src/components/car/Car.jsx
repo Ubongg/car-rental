@@ -118,7 +118,7 @@ const ImgBx = styled.div`
     height: 400px;
   }
   @media screen and (min-width: 1024px) {
-    height: 120px;
+    height: 160px;
   }
 `;
 const TextBx = styled.div`

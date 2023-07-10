@@ -2,6 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Car from "@/components/car/Car";
+import { BsTrophyFill } from "react-icons/bs";
+import { ImRoad } from "react-icons/im";
+import { FaMapPin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -85,12 +88,43 @@ export default function Home() {
                 img="/assets/car3.jpeg"
                 price="$545"
               />
-              <Car
-                body="Pickup Truck"
-                name="Ford Raptor"
-                img="/assets/car4.jpeg"
-                price="$144"
-              />
+            </div>
+          </div>
+        </div>
+        <div className={styles.explore}>
+          <div className={styles.exploreWrap}>
+            <h2>Explore the world with comfortable car</h2>
+            <div className={styles.offers}>
+              <div className={styles.offer}>
+                <div className={styles.icon}>
+                  <BsTrophyFill />
+                </div>
+                <h5>First Class Services</h5>
+                <p>
+                  Where luxury meets exceptional care, creating unforgettable
+                  moments and exceeding your every expectation.
+                </p>
+              </div>
+              <div className={styles.offer}>
+                <div className={styles.icon}>
+                  <ImRoad />
+                </div>
+                <h5>24/7 road assistance</h5>
+                <p>
+                  Reliable support when you need it most, keeping you on the
+                  move with confidence and peace of mind.
+                </p>
+              </div>
+              <div className={styles.offer}>
+                <div className={styles.icon}>
+                  <FaMapPin />
+                </div>
+                <h5>Free Pick-Up & Drop-Off</h5>
+                <p>
+                  Enjoy free pickup and drop-off services, adding an extra layer
+                  of ease to your car rental experience.
+                </p>
+              </div>
             </div>
           </div>
         </div>

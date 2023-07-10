@@ -117,6 +117,44 @@
 
   gap: 1.5rem;
 }
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: var(--smallPadding);
+}
+.exploreWrap {
+  max-width: 480px;
+  width: 100%;
+}
+.exploreWrap h2 {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+}
+.exploreWrap .offers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.exploreWrap .offers .offer .icon {
+  display: inline-block;
+  background: var(--primaryColor);
+  padding: 20px 20px 15px;
+  margin-bottom: 20px;
+  color: var(--mainWhite);
+  border-radius: var(--small-radius);
+  font-size: 2rem;
+}
+.exploreWrap .offers .offer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.exploreWrap .offers .offer p {
+  color: var(--mainGrey);
+  line-height: var(--line-height);
+  letter-spacing: var(--small-spacing);
+}
 
 @media screen and (min-width: 768px) {
   .heroWrap {
