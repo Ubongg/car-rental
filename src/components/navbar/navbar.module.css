@@ -10,7 +10,10 @@
   transition: var(--mainTransition);
 }
 .containerActive {
-  background: var(--primary-red);
+  background: var(--mainWhite);
+}
+.containerActive .links a {
+  color: var(--mainGrey);
 }
 .navHeader {
   display: flex;
@@ -81,8 +84,8 @@
     background: transparent;
   }
   .navCenter {
-    width: min(120ch, 100% - 4rem);
-    margin-inline: auto;
+    width: var(--width);
+    margin-inline: var(--margin-inline);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,6 +96,9 @@
   }
   .logo {
     color: var(--mainWhite);
+  }
+  .containerActive .logo {
+    color: var(--primaryColor);
   }
   .navToggle,
   .navToggleShow {

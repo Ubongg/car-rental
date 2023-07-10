@@ -1,12 +1,19 @@
 .container {
   color: var(--mainWhite);
 }
-.home {
+
+.hero {
   padding: 120px var(--smallPadding);
   background: url("/assets/body.jpeg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroWrap {
+  max-width: 480px;
 }
 .imgBx {
   width: 100%;
@@ -75,5 +82,40 @@
 .number p {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
+}
+@media screen and (min-width: 768px) {
+  .heroWrap {
+    max-width: 650px;
+  }
+  .imgBx {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heroWrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: var(--width);
+    margin-inline: var(--margin-inline);
+    max-width: 100%;
+    gap: 3.5rem;
+  }
+  .imgBx {
+    flex: 1;
+    height: 350px;
+  }
+  .textBx {
+    flex: 1;
+  }
+  .textBx h6 {
+    font-size: 1rem;
+  }
+  .numbers {
+    display: flex;
+    gap: 1rem;
+  }
+  .number {
+    width: 150px;
+  }
 }

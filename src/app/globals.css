@@ -13,6 +13,8 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --radius: 0.25rem;
   --smallPadding: 1.6rem;
+  --width: min(120ch, 100% - 4rem);
+  --margin-inline: auto;
 }
 html,
 body {
