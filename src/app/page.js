@@ -136,6 +136,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.quality}>
+          <div className={styles.qualityImg}></div>
           <div className={styles.qualityWrap}>
             <h2>Only Quality For Clients</h2>
             <div className={styles.qualities}>
