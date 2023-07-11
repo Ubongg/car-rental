@@ -204,6 +204,103 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles.latest}>
+          <div className={styles.latestWrap}>
+            <div className={styles.newsHeader}>
+              <h2>Latest News</h2>
+              <p>
+                Breaking news, fresh perspectives, and in-depth coverage - stay
+                ahead with our latest news, insights, and analysis.
+              </p>
+            </div>
+            <div className={styles.newsList}>
+              <div className={styles.news}>
+                <div
+                  className={styles.newsImg}
+                  style={{
+                    background: 'url("/assets/news1.jpeg")',
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <p>
+                    <span>10</span>
+                    <br />
+                    MAR
+                  </p>
+                </div>
+                <div className={styles.newsText}>
+                  <h5>Enjoy Best Travel Experience</h5>
+                  <p>
+                    Dolore officia sint incididunt non excepteur ea mollit
+                    commodo ut enim reprehenderit cupidatat labore ad laborum
+                    consectetur.
+                  </p>
+                  <button>
+                    <Link href="/news/1">Read More</Link>
+                  </button>
+                </div>
+              </div>
+              <div className={styles.news}>
+                <div
+                  className={styles.newsImg}
+                  style={{
+                    background: 'url("/assets/news2.jpeg")',
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <p>
+                    <span>12</span>
+                    <br />
+                    MAR
+                  </p>
+                </div>
+                <div className={styles.newsText}>
+                  <h5>The Future of Car Rent Here</h5>
+                  <p>
+                    Dolore officia sint incididunt non excepteur ea mollit
+                    commodo ut enim reprehenderit cupidatat labore ad laborum
+                    consectetur.
+                  </p>
+                  <button>
+                    <Link href="/news/1">Read More</Link>
+                  </button>
+                </div>
+              </div>
+              <div className={styles.news}>
+                <div
+                  className={styles.newsImg}
+                  style={{
+                    background: 'url("/assets/news3.jpeg")',
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <p>
+                    <span>14</span>
+                    <br />
+                    MAR
+                  </p>
+                </div>
+                <div className={styles.newsText}>
+                  <h5>Holiday Tips For Backpacker</h5>
+                  <p>
+                    Dolore officia sint incididunt non excepteur ea mollit
+                    commodo ut enim reprehenderit cupidatat labore ad laborum
+                    consectetur.
+                  </p>
+                  <button>
+                    <Link href="/news/1">Read More</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
