@@ -76,7 +76,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <div className={`${navbar ? styles.containerActive : styles.container}`}>
+    <div className={navbar ? styles.containerActive : styles.container}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <Link href="/">
@@ -86,7 +86,7 @@ const Navbar = () => {
             </h1>
           </Link>
           <button
-            className={`${showLinks ? styles.navToggleShow : styles.navToggle}`}
+            className={showLinks ? styles.navToggleShow : styles.navToggle}
             onClick={toggleLinks}
           >
             {showLinks ? <FaTimes /> : <FaBars />}

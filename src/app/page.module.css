@@ -39,7 +39,7 @@
   letter-spacing: var(--spacing);
 }
 .textBx p {
-  letter-spacing: var(--spacing);
+  letter-spacing: var(--small-spacing);
   line-height: var(--line-height);
   margin-bottom: 20px;
 }
@@ -128,7 +128,8 @@
   max-width: 480px;
   width: 100%;
 }
-.exploreWrap h2 {
+.exploreWrap h2,
+.qualityWrap h2 {
   font-size: 2.3rem;
   margin-bottom: 30px;
 }
@@ -140,14 +141,14 @@
 .exploreWrap .offers .offer .icon {
   display: inline-block;
   background: var(--primaryColor);
-  padding: 20px 20px 15px;
+  padding: 20px 20px 12px;
   margin-bottom: 20px;
   color: var(--mainWhite);
   border-radius: var(--small-radius);
   font-size: 2rem;
 }
 .exploreWrap .offers .offer h5 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-bottom: 10px;
 }
 .exploreWrap .offers .offer p {
@@ -155,16 +156,68 @@
   line-height: var(--line-height);
   letter-spacing: var(--small-spacing);
 }
+.quality {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--smallPadding);
+}
+.qualityWrap {
+  max-width: 480px;
+  width: 100%;
+}
+.singleQuality {
+  display: flex;
+  margin-bottom: 20px;
+}
+.singleQuality button {
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: var(--mainTransition);
+}
+.luxuryButton,
+.comfortButton,
+.prestigeButton {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border-radius: var(--small-radius);
+  font-weight: 600;
+  box-shadow: var(--dark-shadow);
+}
+.luxuryButtonHide,
+.comfortButtonHide,
+.prestigeButtonHide {
+  background: transparent;
+  color: var(--mainGrey);
+}
+.luxury,
+.comfort,
+.prestige {
+  color: var(--mainGrey);
+  line-height: var(--line-height);
+  letter-spacing: var(--small-spacing);
+}
+.luxuryHide,
+.comfortHide,
+.prestigeHide {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
-  .heroWrap {
+  .heroWrap,
+  .fleetsWrap,
+  .exploreWrap {
     max-width: 650px;
   }
   .imgBx {
     height: 500px;
   }
-  .fleetsWrap {
-    max-width: 650px;
+  .exploreWrap .offers {
+    flex-direction: row;
   }
 }
 
@@ -205,5 +258,12 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+  }
+  .exploreWrap {
+    width: var(--width);
+    margin-inline: var(--margin-inline);
+    max-width: 100%;
+    display: flex;
+    gap: 1.5rem;
   }
 }

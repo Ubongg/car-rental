@@ -11,6 +11,10 @@
 }
 .containerActive {
   background: var(--mainWhite);
+  box-shadow: var(--light-shadow);
+}
+.container {
+  box-shadow: var(--light-shadow);
 }
 .containerActive .links a {
   color: var(--mainGrey);
@@ -82,6 +86,7 @@
 @media screen and (min-width: 1024px) {
   .container {
     background: transparent;
+    box-shadow: none;
   }
   .navCenter {
     width: var(--width);
