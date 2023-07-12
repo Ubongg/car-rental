@@ -301,6 +301,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles.homeContact}>
+          <div className={styles.homeContactWrap}>
+            <h2>
+              Call us for further information. Yubo Rentals customer care is
+              here to help you anytime.
+            </h2>
+            <button>
+              <Link href="/contact">Contact Us</Link>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
