@@ -7,7 +7,7 @@ import Car from "@/components/car/Car";
 import { BsTrophyFill } from "react-icons/bs";
 import { ImRoad } from "react-icons/im";
 import { FaMapPin } from "react-icons/fa";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [luxury, setLuxury] = useState(true);
