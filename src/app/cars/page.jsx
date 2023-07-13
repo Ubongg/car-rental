@@ -17,12 +17,6 @@ const Cars = () => {
           price="$152"
         />
         <Car
-          body="Hatchback"
-          name="Mini Cooper"
-          img="/assets/car2.jpeg"
-          price="$238"
-        />
-        <Car
           body="Exotic Car"
           name="Ferarri Enzo"
           img="/assets/car3.jpeg"
@@ -32,12 +26,6 @@ const Cars = () => {
           body="Pickup Truck"
           name="Ford Raptor"
           img="/assets/car4.jpeg"
-          price="$152"
-        />
-        <Car
-          body="Hatchback"
-          name="VW Polo"
-          img="/assets/car5.jpeg"
           price="$152"
         />
         <Car
@@ -53,15 +41,14 @@ const Cars = () => {
           price="$152"
         />
         <Car
-          body="SUV"
-          name="Toyota Rav 4"
-          img="/assets/car8.jpeg"
+          body="Exotic Car"
+          name="Bentley"
+          img="/assets/car9.jpeg"
           price="$152"
         />
-        <Car body="SUV" name="Bentley" img="/assets/car9.jpeg" price="$152" />
         <Car body="Sedan" name="Lexus" img="/assets/car10.jpeg" price="$152" />
         <Car
-          body="Exotic Car"
+          body="SUVr"
           name="Range Rover"
           img="/assets/car11.jpeg"
           price="$152"

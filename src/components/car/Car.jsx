@@ -13,6 +13,8 @@ const Car = ({ body, name, img, price }) => {
 
   const likesRef = useRef(null);
 
+  var newName = name.replace(/\s+/g, "-").toLowerCase();
+
   const changeCount = () => {
     if (increase) {
       setCount((prev) => {
@@ -77,7 +79,7 @@ const Car = ({ body, name, img, price }) => {
           <div className="priceButton">
             <h2>{price}</h2>
             <button>
-              <Link href="/cars">Rent Now</Link>
+              <Link href={`/cars/${newName}`}>Rent Now</Link>
             </button>
           </div>
         </DownText>
