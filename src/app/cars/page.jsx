@@ -1,8 +1,107 @@
+"use client";
+
+import Background from "@/components/background/background";
+import Car from "@/components/car/Car";
 import React from "react";
-import styles from "./page.module.css";
+import styled from "styled-components";
 
 const Cars = () => {
-  return <div>Cars</div>;
+  return (
+    <Container>
+      <Background header="Cars" />
+      <CarsWrap>
+        <Car
+          body="SUV"
+          name="Jeep Renegade"
+          img="/assets/car1.jpeg"
+          price="$152"
+        />
+        <Car
+          body="Hatchback"
+          name="Mini Cooper"
+          img="/assets/car2.jpeg"
+          price="$238"
+        />
+        <Car
+          body="Exotic Car"
+          name="Ferarri Enzo"
+          img="/assets/car3.jpeg"
+          price="$152"
+        />
+        <Car
+          body="Pickup Truck"
+          name="Ford Raptor"
+          img="/assets/car4.jpeg"
+          price="$152"
+        />
+        <Car
+          body="Hatchback"
+          name="VW Polo"
+          img="/assets/car5.jpeg"
+          price="$152"
+        />
+        <Car
+          body="Exotic Car"
+          name="Chevrolet Camaro"
+          img="/assets/car6.jpeg"
+          price="$152"
+        />
+        <Car
+          body="Minivan"
+          name="Hyundai Staria"
+          img="/assets/car7.jpeg"
+          price="$152"
+        />
+        <Car
+          body="SUV"
+          name="Toyota Rav 4"
+          img="/assets/car8.jpeg"
+          price="$152"
+        />
+        <Car body="SUV" name="Bentley" img="/assets/car9.jpeg" price="$152" />
+        <Car body="Sedan" name="Lexus" img="/assets/car10.jpeg" price="$152" />
+        <Car
+          body="Exotic Car"
+          name="Range Rover"
+          img="/assets/car11.jpeg"
+          price="$152"
+        />
+        <Car
+          body="Sedan"
+          name="Mini Cooper"
+          img="/assets/car12.jpeg"
+          price="$152"
+        />
+      </CarsWrap>
+    </Container>
+  );
 };
 
 export default Cars;
+
+const Container = styled.div`
+  padding: 0 var(--smallPadding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+const CarsWrap = styled.div`
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 100px 0;
+
+  @media screen and (min-width: 768px) {
+    max-width: 650px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: var(--width);
+    margin-inline: var(--margin-inline);
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`;

@@ -129,7 +129,7 @@
     color: var(--mainWhite);
   }
   .links a:hover {
-    color: var(--secColor);
+    color: var(--primaryColor);
   }
   .signIn {
     display: flex;
