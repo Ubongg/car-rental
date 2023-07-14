@@ -18,6 +18,7 @@
   --width: min(120ch, 100% - 4rem);
   --margin-inline: auto;
   --backgroundGrey: rgb(248, 248, 248);
+  --blackGrey: #3f4254;
 }
 html,
 body {
