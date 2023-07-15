@@ -5,6 +5,10 @@ import styles from "./page.module.css";
 import Background from "@/components/background/background";
 import { useSpring, animated } from "@react-spring/web";
 import ScrollTrigger from "react-scroll-trigger";
+import { TiSocialFacebook } from "react-icons/ti";
+import { TiSocialTwitter } from "react-icons/ti";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { RiPinterestFill } from "react-icons/ri";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -65,6 +69,101 @@ const About = () => {
             </div>
           </div>
         </ScrollTrigger>
+        <div className={styles.board}>
+          <div className={styles.boardWrap}>
+            <h2>Board of Directors</h2>
+            <div className={styles.directors}>
+              <div className={styles.director}>
+                <div className={styles.imgBx}>
+                  <div className={styles.icons}>
+                    <span>
+                      <TiSocialFacebook />
+                    </span>
+                    <span>
+                      <TiSocialTwitter />
+                    </span>
+                    <span>
+                      <TiSocialLinkedin />
+                    </span>
+                    <span>
+                      <RiPinterestFill />
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.textBx}>
+                  <h5>Fynley Wilkinson</h5>
+                  <p>Chief Creative Officer</p>
+                </div>
+              </div>
+              <div className={styles.director}>
+                <div className={styles.imgBx}>
+                  <div className={styles.icons}>
+                    <span>
+                      <TiSocialFacebook />
+                    </span>
+                    <span>
+                      <TiSocialTwitter />
+                    </span>
+                    <span>
+                      <TiSocialLinkedin />
+                    </span>
+                    <span>
+                      <RiPinterestFill />
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.textBx}>
+                  <h5>Peter Welsh</h5>
+                  <p>Chief Technology Officer</p>
+                </div>
+              </div>
+              <div className={styles.director}>
+                <div className={styles.imgBx}>
+                  <div className={styles.icons}>
+                    <span>
+                      <TiSocialFacebook />
+                    </span>
+                    <span>
+                      <TiSocialTwitter />
+                    </span>
+                    <span>
+                      <TiSocialLinkedin />
+                    </span>
+                    <span>
+                      <RiPinterestFill />
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.textBx}>
+                  <h5>John Shepard Wilkinson</h5>
+                  <p>Chief Executive Officer</p>
+                </div>
+              </div>
+              <div className={styles.director}>
+                <div className={styles.imgBx}>
+                  <div className={styles.icons}>
+                    <span>
+                      <TiSocialFacebook />
+                    </span>
+                    <span>
+                      <TiSocialTwitter />
+                    </span>
+                    <span>
+                      <TiSocialLinkedin />
+                    </span>
+                    <span>
+                      <RiPinterestFill />
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.textBx}>
+                  <h5>Robyn Peel</h5>
+                  <p>Director of Finance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
