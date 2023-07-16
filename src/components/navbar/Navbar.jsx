@@ -95,9 +95,8 @@ const Navbar = () => {
         <div className={styles.linksContainer} ref={linksContainerRef}>
           <ul className={styles.links} ref={linksRef}>
             {links.map((link) => (
-              <li>
+              <li key={link.id}>
                 <Link
-                  key={link.id}
                   href={link.url}
                   className={styles.link}
                   onClick={toggleLinks}

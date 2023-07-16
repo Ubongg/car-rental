@@ -46,6 +46,10 @@
 .scrollCount .count h2 {
   color: var(--primaryColor);
   font-size: 2.3rem;
+  letter-spacing: var(--small-spacing);
+}
+.scrollCount .count p {
+  letter-spacing: var(--small-spacing);
 }
 .board {
   display: flex;
@@ -57,11 +61,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: 50px 0;
+  padding: 100px var(--smallPadding) 120px;
 }
 .boardWrap {
   max-width: 480px;
   width: 100%;
-  padding: 100px var(--smallPadding) 120px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -114,14 +118,80 @@
   font-size: 0.9rem;
   letter-spacing: var(--small-spacing);
 }
+.features {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+.featuresWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 480px;
+  width: 100%;
+}
+.featuresWrap h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--blackGrey);
+  margin-bottom: 30px;
+}
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+.right,
+.center,
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.right .feature {
+  text-align: right;
+}
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.feature .icon {
+  background: var(--primaryColor);
+  padding: 15px 15px 8px;
+  margin-bottom: 20px;
+  color: var(--mainWhite);
+  border-radius: var(--small-radius);
+  font-size: 1.3rem;
+}
+.feature h5 {
+  font-size: 1.15rem;
+  color: var(--blackGrey);
+  line-height: var(--line-height);
+  margin-bottom: 5px;
+}
+.feature p {
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+  line-height: var(--line-height);
+}
+.feature .img {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+@media screen and (max-width: 457px) {
+  .feature .img {
+    height: 170px;
+  }
+}
 @media screen and (min-width: 576px) {
   .scrollCount {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .boardWrap {
-    padding: 100px 0 120px;
   }
   .directors {
     display: grid;
@@ -132,19 +202,21 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .aboutWrap {
+  .aboutWrap,
+  .boardWrap,
+  .featuresWrap {
     max-width: 650px;
-  }
-  .boardWrap {
-    max-width: 650px;
-    padding: 100px 0 120px;
   }
   .director .imgBx {
     height: 330px;
   }
+  .feature .img {
+    height: 300px;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .aboutWrap {
+  .aboutWrap,
+  .featuresWrap {
     width: var(--width);
     margin-inline: var(--margin-inline);
     max-width: 100%;
@@ -167,7 +239,6 @@
     width: var(--width);
     margin-inline: var(--margin-inline);
     max-width: 100%;
-    padding: 100px var(--smallPadding) 120px;
   }
   .directors {
     display: grid;
@@ -175,5 +246,24 @@
   }
   .director .imgBx {
     height: 230px;
+  }
+  .featuresList {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+  .feature h5 {
+    font-size: 1rem;
+  }
+  .feature p {
+    font-size: 0.9rem;
+  }
+  .feature .img {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature .img {
+    height: 250px;
   }
 }

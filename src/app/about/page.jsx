@@ -9,6 +9,11 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { RiPinterestFill } from "react-icons/ri";
+import { BsTrophyFill } from "react-icons/bs";
+import { ImRoad } from "react-icons/im";
+import { FaMapPin } from "react-icons/fa";
+import { FaTag } from "react-icons/fa";
+import Image from "next/image";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -192,6 +197,72 @@ const About = () => {
               <div className={styles.textBx}>
                 <h5>Robyn Peel</h5>
                 <p>Director of Finance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.features}>
+        <div className={styles.featuresWrap}>
+          <h2>Features Highlight</h2>
+          <div className={styles.featuresList}>
+            <div className={styles.left}>
+              <div className={styles.feature}>
+                <span className={styles.icon}>
+                  <BsTrophyFill />
+                </span>
+                <div className={styles.text}>
+                  <h5>First class services</h5>
+                  <p>
+                    Where luxury meets exceptional care, creating unforgettable
+                    moments and exceeding your every expectation.
+                  </p>
+                </div>
+              </div>
+              <div className={styles.feature}>
+                <span className={styles.icon}>
+                  <ImRoad />
+                </span>
+                <div className={styles.text}>
+                  <h5>24/7 road assistance</h5>
+                  <p>
+                    Reliable support when you need it most, keeping you on the
+                    move with confidence and peace of mind.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.center}>
+              <div className={styles.feature}>
+                <div className={styles.img}>
+                  <Image src="/assets/black.png" fill={true} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.feature}>
+                <div className={styles.text}>
+                  <h5>Quality at Minimum Expense</h5>
+                  <p>
+                    Unlocking affordable brilliance with elevating quality while
+                    minimizing costs for maximum value.
+                  </p>
+                </div>
+                <span className={styles.icon}>
+                  <FaTag />
+                </span>
+              </div>
+              <div className={styles.feature}>
+                <div className={styles.text}>
+                  <h5>First class services</h5>
+                  <p>
+                    Enjoy free pickup and drop-off services, adding an extra
+                    layer of ease to your car rental experience.
+                  </p>
+                </div>
+                <span className={styles.icon}>
+                  <FaMapPin />
+                </span>
               </div>
             </div>
           </div>
