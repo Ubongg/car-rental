@@ -42,14 +42,14 @@ const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
+
   const toggleLinks = () => {
     if (window.innerWidth < 1024) {
       setShowLinks(!showLinks);
     }
   };
-
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
 
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;

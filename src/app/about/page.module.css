@@ -182,6 +182,101 @@
   height: 220px;
   position: relative;
 }
+.quality {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px var(--smallPadding);
+  background: var(--backgroundGrey);
+  margin: 50px 0 0;
+  width: 100vw;
+  /* border-bottom: 100px solid var(--backgroundGrey); */
+}
+.qualityWrap {
+  max-width: 480px;
+  width: 100%;
+}
+.qualityWrap h2 {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  color: var(--blackGrey);
+}
+.singleQuality {
+  display: flex;
+  margin-bottom: 20px;
+}
+.singleQuality button {
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: var(--mainTransition);
+}
+.luxuryButton,
+.comfortButton,
+.prestigeButton {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border-radius: var(--small-radius);
+  font-weight: 600;
+  box-shadow: var(--dark-shadow);
+}
+.luxuryButtonHide,
+.comfortButtonHide,
+.prestigeButtonHide {
+  background: transparent;
+  color: var(--mainGrey);
+}
+.luxury,
+.comfort,
+.prestige {
+  color: var(--mainGrey);
+  line-height: var(--line-height);
+  letter-spacing: var(--small-spacing);
+}
+.luxuryHide,
+.comfortHide,
+.prestigeHide {
+  display: none;
+}
+.qualityImg {
+  display: none;
+}
+.homeContact {
+  background: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px var(--smallPadding);
+  width: 100vw;
+}
+.homeContactWrap {
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+.homeContactWrap h2 {
+  line-height: 2.8rem;
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+}
+.homeContactWrap button {
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+}
+.homeContactWrap button a {
+  display: flex;
+  background: transparent;
+  padding: 10px 30px;
+  color: var(--mainWhite);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--small-radius);
+  border: 0.1px solid rgb(193, 191, 191);
+}
 
 @media screen and (max-width: 457px) {
   .feature .img {
@@ -204,7 +299,9 @@
 @media screen and (min-width: 768px) {
   .aboutWrap,
   .boardWrap,
-  .featuresWrap {
+  .featuresWrap,
+  .qualityWrap,
+  .homeContactWrap {
     max-width: 650px;
   }
   .director .imgBx {
@@ -260,6 +357,29 @@
   }
   .feature .img {
     height: 220px;
+  }
+  .quality {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 0 var(--smallPadding) 0 0;
+  }
+  .qualityImg {
+    display: flex;
+    flex: 1;
+    background: url("/assets/home-sec1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
+  .qualityWrap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {

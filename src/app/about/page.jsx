@@ -14,6 +14,7 @@ import { ImRoad } from "react-icons/im";
 import { FaMapPin } from "react-icons/fa";
 import { FaTag } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -27,6 +28,9 @@ function Number({ n }) {
 
 const About = () => {
   const [counterOn, setCounterOn] = useState(false);
+  const [luxury, setLuxury] = useState(true);
+  const [comfort, setComfort] = useState(false);
+  const [prestige, setPrestige] = useState(false);
 
   return (
     <div className={styles.about}>
@@ -266,6 +270,84 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={styles.quality}>
+        <div className={styles.qualityImg}></div>
+        <div className={styles.qualityWrap}>
+          <h2>Only Quality For Clients</h2>
+          <div className={styles.qualities}>
+            <div className={styles.singleQuality}>
+              <button
+                className={
+                  luxury ? styles.luxuryButton : styles.luxuryButtonHide
+                }
+                onClick={() => {
+                  setLuxury(true);
+                  setComfort(false);
+                  setPrestige(false);
+                }}
+              >
+                LUXURY
+              </button>
+              <button
+                className={
+                  comfort ? styles.comfortButton : styles.comfortButtonHide
+                }
+                onClick={() => {
+                  setLuxury(false);
+                  setComfort(true);
+                  setPrestige(false);
+                }}
+              >
+                COMFORT
+              </button>
+              <button
+                className={
+                  prestige ? styles.prestigeButton : styles.prestigeButtonHide
+                }
+                onClick={() => {
+                  setLuxury(false);
+                  setComfort(false);
+                  setPrestige(true);
+                }}
+              >
+                PRESTIGE
+              </button>
+            </div>
+            <p className={luxury ? styles.luxury : styles.luxuryHide}>
+              We offer a meticulously curated collection of the most
+              sought-after luxury vehicles on the market. Whether you prefer the
+              sporty allure of a high-performance sports car, the sophistication
+              of a sleek and luxurious sedan, or the versatility of a premium
+              SUV, we have the perfect car to match your discerning taste.
+            </p>
+            <p className={comfort ? styles.comfort : styles.comfortHide}>
+              We prioritize your comfort and convenience throughout your
+              journey. We understand that a comfortable ride can make a world of
+              difference, whether you're embarking on a business trip or
+              enjoying a leisurely vacation. That's why we offer a wide range of
+              well-maintained, comfortable cars that cater to your specific
+              needs.
+            </p>
+            <p className={prestige ? styles.prestige : styles.prestigeHide}>
+              We understand that prestige goes beyond luxury. It's about making
+              a statement, embracing sophistication, and indulging in the finer
+              things in life. That's why we offer an exclusive selection of
+              prestigious cars that exude elegance, style, and status.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.homeContact}>
+        <div className={styles.homeContactWrap}>
+          <h2>
+            Call us for further information. Yubo Rentals customer care is here
+            to help you anytime.
+          </h2>
+          <button>
+            <Link href="/contact">Contact Us</Link>
+          </button>
         </div>
       </div>
     </div>

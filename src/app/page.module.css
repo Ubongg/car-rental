@@ -101,7 +101,7 @@
   text-align: center;
 }
 .fleets .header h2 {
-  color: var(--mainBlack);
+  color: var(--blackGrey);
   font-size: 2.3rem;
   margin-bottom: 10px;
 }
@@ -131,6 +131,7 @@
 .qualityWrap h2 {
   font-size: 2.3rem;
   margin-bottom: 30px;
+  color: var(--blackGrey);
 }
 .exploreWrap .offers {
   display: flex;
@@ -149,6 +150,7 @@
 .exploreWrap .offers .offer h5 {
   font-size: 1.15rem;
   margin-bottom: 10px;
+  color: var(--blackGrey);
 }
 .exploreWrap .offers .offer p {
   color: var(--mainGrey);
@@ -228,6 +230,7 @@
 .newsHeader h2 {
   font-size: 2.3rem;
   margin-bottom: 10px;
+  color: var(--blackGrey);
 }
 .newsHeader p {
   color: var(--mainGrey);
@@ -278,6 +281,7 @@
 .newsText h5 {
   font-size: 1.03rem;
   margin-bottom: 10px;
+  color: var(--blackGrey);
 }
 .newsText p {
   letter-spacing: var(--small-spacing);

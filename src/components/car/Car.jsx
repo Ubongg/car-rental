@@ -128,7 +128,7 @@ const TextBx = styled.div`
 `;
 const CarName = styled.div`
   font-weight: 600;
-  color: var(--mainBlack);
+  color: var(--blackGrey);
 `;
 const Likes = styled.div`
   display: flex;
@@ -160,6 +160,7 @@ const Detail = styled.div`
   .text {
     font-weight: 600;
     font-size: 0.9rem;
+    color: var(--blackGrey);
   }
 `;
 const TopText = styled.div`
@@ -178,6 +179,9 @@ const DownText = styled.div`
   .priceButton {
     display: flex;
     justify-content: space-between;
+  }
+  .priceButton h2 {
+    color: var(--blackGrey);
   }
   button {
     border: none;
