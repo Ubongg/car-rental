@@ -69,97 +69,129 @@ const About = () => {
             </div>
           </div>
         </ScrollTrigger>
-        <div className={styles.board}>
-          <div className={styles.boardWrap}>
-            <h2>Board of Directors</h2>
-            <div className={styles.directors}>
-              <div className={styles.director}>
-                <div className={styles.imgBx}>
-                  <div className={styles.icons}>
-                    <span>
-                      <TiSocialFacebook />
-                    </span>
-                    <span>
-                      <TiSocialTwitter />
-                    </span>
-                    <span>
-                      <TiSocialLinkedin />
-                    </span>
-                    <span>
-                      <RiPinterestFill />
-                    </span>
-                  </div>
-                </div>
-                <div className={styles.textBx}>
-                  <h5>Fynley Wilkinson</h5>
-                  <p>Chief Creative Officer</p>
-                </div>
-              </div>
-              <div className={styles.director}>
-                <div className={styles.imgBx}>
-                  <div className={styles.icons}>
-                    <span>
-                      <TiSocialFacebook />
-                    </span>
-                    <span>
-                      <TiSocialTwitter />
-                    </span>
-                    <span>
-                      <TiSocialLinkedin />
-                    </span>
-                    <span>
-                      <RiPinterestFill />
-                    </span>
-                  </div>
-                </div>
-                <div className={styles.textBx}>
-                  <h5>Peter Welsh</h5>
-                  <p>Chief Technology Officer</p>
+      </div>
+      <div className={styles.board}>
+        <div className={styles.boardWrap}>
+          <h2>Board of Directors</h2>
+          <div className={styles.directors}>
+            <div className={styles.director}>
+              <div
+                className={styles.imgBx}
+                style={{
+                  background: "url('/assets/board1.jpeg')",
+                  backgroundPosition: "top",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              >
+                <div className={styles.icons}>
+                  <span>
+                    <TiSocialFacebook />
+                  </span>
+                  <span>
+                    <TiSocialTwitter />
+                  </span>
+                  <span>
+                    <TiSocialLinkedin />
+                  </span>
+                  <span>
+                    <RiPinterestFill />
+                  </span>
                 </div>
               </div>
-              <div className={styles.director}>
-                <div className={styles.imgBx}>
-                  <div className={styles.icons}>
-                    <span>
-                      <TiSocialFacebook />
-                    </span>
-                    <span>
-                      <TiSocialTwitter />
-                    </span>
-                    <span>
-                      <TiSocialLinkedin />
-                    </span>
-                    <span>
-                      <RiPinterestFill />
-                    </span>
-                  </div>
-                </div>
-                <div className={styles.textBx}>
-                  <h5>John Shepard Wilkinson</h5>
-                  <p>Chief Executive Officer</p>
+              <div className={styles.textBx}>
+                <h5>Fynley Wilkinson</h5>
+                <p>Chief Creative Officer</p>
+              </div>
+            </div>
+            <div className={styles.director}>
+              <div
+                className={styles.imgBx}
+                style={{
+                  background: "url('/assets/board2.jpeg')",
+                  backgroundPosition: "top",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              >
+                <div className={styles.icons}>
+                  <span>
+                    <TiSocialFacebook />
+                  </span>
+                  <span>
+                    <TiSocialTwitter />
+                  </span>
+                  <span>
+                    <TiSocialLinkedin />
+                  </span>
+                  <span>
+                    <RiPinterestFill />
+                  </span>
                 </div>
               </div>
-              <div className={styles.director}>
-                <div className={styles.imgBx}>
-                  <div className={styles.icons}>
-                    <span>
-                      <TiSocialFacebook />
-                    </span>
-                    <span>
-                      <TiSocialTwitter />
-                    </span>
-                    <span>
-                      <TiSocialLinkedin />
-                    </span>
-                    <span>
-                      <RiPinterestFill />
-                    </span>
-                  </div>
+              <div className={styles.textBx}>
+                <h5>Peter Welsh</h5>
+                <p>Chief Technology Officer</p>
+              </div>
+            </div>
+            <div className={styles.director}>
+              <div
+                className={styles.imgBx}
+                style={{
+                  background: "url('/assets/board3.jpeg')",
+                  backgroundPosition: "top",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              >
+                <div className={styles.icons}>
+                  <span>
+                    <TiSocialFacebook />
+                  </span>
+                  <span>
+                    <TiSocialTwitter />
+                  </span>
+                  <span>
+                    <TiSocialLinkedin />
+                  </span>
+                  <span>
+                    <RiPinterestFill />
+                  </span>
                 </div>
-                <div className={styles.textBx}>
-                  <h5>Robyn Peel</h5>
-                  <p>Director of Finance</p>
+              </div>
+              <div className={styles.textBx}>
+                <h5>John Shepard</h5>
+                <p>Chief Executive Officer</p>
+              </div>
+            </div>
+            <div className={styles.director}>
+              <div
+                className={styles.imgBx}
+                style={{
+                  background: "url('/assets/board4.jpeg')",
+                  backgroundPosition: "top",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              >
+                <div className={styles.icons}>
+                  <span>
+                    <TiSocialFacebook />
+                  </span>
+                  <span>
+                    <TiSocialTwitter />
+                  </span>
+                  <span>
+                    <TiSocialLinkedin />
+                  </span>
+                  <span>
+                    <RiPinterestFill />
+                  </span>
                 </div>
+              </div>
+              <div className={styles.textBx}>
+                <h5>Robyn Peel</h5>
+                <p>Director of Finance</p>
               </div>
             </div>
           </div>

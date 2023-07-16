@@ -9,7 +9,7 @@
 .aboutWrap {
   max-width: 480px;
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 0 0;
 }
 .aboutSec1 {
   display: flex;
@@ -47,16 +47,100 @@
   color: var(--primaryColor);
   font-size: 2.3rem;
 }
+.board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url("/assets/directors.jpeg");
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 50px 0;
+}
+.boardWrap {
+  max-width: 480px;
+  width: 100%;
+  padding: 100px var(--smallPadding) 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.boardWrap h2 {
+  color: var(--mainWhite);
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+}
+.directors {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.director {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+.director .imgBx {
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+.director .imgBx .icons {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+}
+.director .imgBx .icons span {
+  padding: 6px 5px 3px;
+  margin-right: 8px;
+  background: var(--primaryColor);
+  border-radius: var(--small-radius);
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+}
+.director .textBx {
+  color: var(--mainWhite);
+}
+.director .textBx h5 {
+  font-size: 1.15rem;
+  margin-bottom: 7px;
+}
+.director .textBx p {
+  font-size: 0.9rem;
+  letter-spacing: var(--small-spacing);
+}
 
 @media screen and (min-width: 576px) {
   .scrollCount {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .boardWrap {
+    padding: 100px 0 120px;
+  }
+  .directors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .director .imgBx {
+    height: 230px;
+  }
 }
 @media screen and (min-width: 768px) {
   .aboutWrap {
     max-width: 650px;
+  }
+  .boardWrap {
+    max-width: 650px;
+    padding: 100px 0 120px;
+  }
+  .director .imgBx {
+    height: 330px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -78,5 +162,18 @@
   .scrollCount {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .boardWrap {
+    width: var(--width);
+    margin-inline: var(--margin-inline);
+    max-width: 100%;
+    padding: 100px var(--smallPadding) 120px;
+  }
+  .directors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .director .imgBx {
+    height: 230px;
   }
 }
