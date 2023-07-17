@@ -36,7 +36,7 @@ const Car = ({ body, name, img, price }) => {
   return (
     <Wrap>
       <ImgBx>
-        <Image src={img} fill={true} alt="" className="img" />
+        <Image src={img} fill={true} alt="" className="img" sizes="" />
       </ImgBx>
       <TextBx>
         <TopText>
