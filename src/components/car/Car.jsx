@@ -36,7 +36,14 @@ const Car = ({ body, name, img, price }) => {
   return (
     <Wrap>
       <ImgBx>
-        <Image src={img} fill={true} alt="" className="img" sizes="" />
+        <Image
+          src={img}
+          fill={true}
+          alt=""
+          className="img"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
       </ImgBx>
       <TextBx>
         <TopText>

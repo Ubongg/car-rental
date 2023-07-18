@@ -44,6 +44,7 @@ const Navbar = () => {
 
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
+  const mounted = useRef(false);
 
   const toggleLinks = () => {
     if (window.innerWidth < 1024) {
@@ -73,7 +74,15 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener("scroll", changeBackground);
+  useEffect(() => {
+    mounted.current = true;
+
+    window.addEventListener("scroll", changeBackground);
+
+    return () => {
+      mounted.current = false;
+    };
+  }, []);
 
   return (
     <div className={navbar ? styles.containerActive : styles.container}>

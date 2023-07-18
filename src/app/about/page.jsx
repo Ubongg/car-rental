@@ -239,7 +239,13 @@ const About = () => {
             <div className={styles.center}>
               <div className={styles.feature}>
                 <div className={styles.img}>
-                  <Image src="/assets/black.png" fill={true} alt="" />
+                  <Image
+                    src="/assets/black.png"
+                    fill={true}
+                    alt=""
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                  />
                 </div>
               </div>
             </div>

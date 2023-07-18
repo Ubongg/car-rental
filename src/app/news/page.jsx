@@ -12,7 +12,7 @@ import { FaTags } from "react-icons/fa";
 const News = () => {
   return (
     <Container>
-      <Background header="News & Updates" />
+      <Background header="News" />
       <NewsWrap>
         <div className="newsList">
           <div className="singleNews">
@@ -23,6 +23,7 @@ const News = () => {
                 alt=""
                 priority
                 className="img"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="info">
@@ -66,6 +67,7 @@ const News = () => {
                 alt=""
                 priority
                 className="img"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="info">
@@ -109,6 +111,7 @@ const News = () => {
                 alt=""
                 priority
                 className="img"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="info">
@@ -152,6 +155,7 @@ const News = () => {
                 alt=""
                 priority
                 className="img"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="info">
@@ -195,6 +199,7 @@ const News = () => {
                 alt=""
                 priority
                 className="img"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="info">
@@ -238,6 +243,7 @@ const News = () => {
                 alt=""
                 priority
                 className="img"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="info">
@@ -326,7 +332,7 @@ const NewsWrap = styled.div`
           height: 350px;
         }
         @media screen and (min-width: 1024px) {
-          height: 200px;
+          height: 170px;
         }
 
         .img {

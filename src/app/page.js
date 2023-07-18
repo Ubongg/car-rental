@@ -25,6 +25,8 @@ export default function Home() {
                 fill={true}
                 alt=""
                 className={styles.img}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
               />
             </div>
             <div className={styles.textBx}>
