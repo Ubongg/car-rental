@@ -89,7 +89,7 @@ const News = () => {
               </p>
             </div>
             <div className="textBx">
-              <h2>Enjoy Best Travel Experience</h2>
+              <h2>The Future of Car Rent</h2>
               <p>
                 Ex ut dolore laboris pariatur voluptate reprehenderit qui dolore
                 officia voluptate est nulla incididunt in tempor aliqua
@@ -132,7 +132,7 @@ const News = () => {
               </p>
             </div>
             <div className="textBx">
-              <h2>Enjoy Best Travel Experience</h2>
+              <h2>Holiday Tips For Backpacker</h2>
               <p>
                 Ex ut dolore laboris pariatur voluptate reprehenderit qui dolore
                 officia voluptate est nulla incididunt in tempor aliqua
@@ -175,7 +175,7 @@ const News = () => {
               </p>
             </div>
             <div className="textBx">
-              <h2>Enjoy Best Travel Experience</h2>
+              <h2>Travel Destination For Couple</h2>
               <p>
                 Ex ut dolore laboris pariatur voluptate reprehenderit qui dolore
                 officia voluptate est nulla incididunt in tempor aliqua
@@ -218,7 +218,7 @@ const News = () => {
               </p>
             </div>
             <div className="textBx">
-              <h2>Enjoy Best Travel Experience</h2>
+              <h2>The Essential Guide to Hotel</h2>
               <p>
                 Ex ut dolore laboris pariatur voluptate reprehenderit qui dolore
                 officia voluptate est nulla incididunt in tempor aliqua
@@ -261,7 +261,7 @@ const News = () => {
               </p>
             </div>
             <div className="textBx">
-              <h2>Enjoy Best Travel Experience</h2>
+              <h2>Travel on a Budget</h2>
               <p>
                 Ex ut dolore laboris pariatur voluptate reprehenderit qui dolore
                 officia voluptate est nulla incididunt in tempor aliqua
