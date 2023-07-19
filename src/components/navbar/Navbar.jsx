@@ -74,15 +74,25 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    mounted.current = true;
+  // useEffect(() => {
+  //   mounted.current = true;
 
-    window.addEventListener("scroll", changeBackground);
+  //   window.addEventListener("scroll", changeBackground);
+
+  //   return () => {
+  //     mounted.current = false;
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      window.addEventListener("scroll", changeBackground);
+    }
 
     return () => {
       mounted.current = false;
     };
-  }, []);
+  }, [mounted]);
 
   return (
     <div className={navbar ? styles.containerActive : styles.container}>

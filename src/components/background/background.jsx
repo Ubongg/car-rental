@@ -23,7 +23,7 @@ const Banner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 0;
+  padding: 60px var(--smallPadding);
 
   @media screen and (min-width: 1024px) {
     padding: 60px 0 100px;
@@ -34,7 +34,8 @@ const Header = styled.div`
   margin-top: 70px;
   h2 {
     color: white;
-    font-size: 3rem;
+    font-size: 2.8rem;
+    text-align: center;
 
     @media screen and (min-width: 768px) {
       font-size: 3rem;

@@ -1,0 +1,177 @@
+.newsDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--smallPadding);
+}
+.newsDetailWrap {
+  max-width: 480px;
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.newsDetailMainSec .imgBx {
+  position: relative;
+  height: 250px;
+}
+.newsDetailMainSec .textBx {
+  margin: 20px 0 80px;
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+  line-height: var(--line-height);
+}
+.newsDetailCommentSec h2 {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  color: var(--blackGrey);
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 40px;
+}
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid var(--lightGrey);
+  padding-bottom: 50px;
+}
+.comment .photo {
+  background: var(--lightGrey);
+  color: var(--mainWhite);
+  padding: 15px 15px 12px;
+  font-size: 2rem;
+}
+.comment .info h5 {
+  color: var(--primaryColor);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.comment .info p {
+  color: var(--mainGrey);
+  font-size: 0.9rem;
+  letter-spacing: var(--small-spacing);
+  line-height: 1.4rem;
+}
+.leaveComment form {
+  width: 100%;
+}
+.leaveComment form h2 {
+  color: var(--blackGrey);
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+.leaveComment form .input,
+.textArea {
+  height: 2.8rem;
+  font-size: 1rem;
+  padding-left: 10px;
+  letter-spacing: var(--small-spacing);
+  outline: none;
+  border: 1px solid var(--lightGrey);
+  border-radius: var(--small-radius);
+  width: 100%;
+  background: var(--backgroundGrey);
+  color: var(--blackGrey);
+  margin-bottom: 20px;
+}
+.textArea {
+  height: 11rem;
+  padding: 10px;
+  resize: none;
+}
+.leaveComment form button {
+  border: none;
+  background: var(--primaryColor);
+  padding: 10px 30px;
+  color: var(--mainWhite);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--small-radius);
+  border: 0.1px solid rgb(193, 191, 191);
+  display: flex;
+  align-self: flex-start;
+  cursor: pointer;
+}
+.header h2 {
+  color: var(--blackGrey);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 60px;
+}
+.socials .icon {
+  padding: 8px 10px 6px;
+  background: var(--primaryColor);
+  font-size: 1.3rem;
+  color: var(--mainWhite);
+  cursor: pointer;
+}
+.recentPosts {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+.recentPost {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--lightGrey);
+  padding-bottom: 10px;
+}
+.recentPost .img {
+  border-radius: var(--small-radius);
+}
+.recentPost .text h5 {
+  margin-bottom: 10px;
+  color: var(--blackGrey);
+  font-size: 0.9rem;
+}
+.recentPost .text p .dateIcon {
+  color: var(--primaryColor);
+  font-size: 0.8rem;
+  margin: 3px 5px 0 0;
+}
+.recentPost .text p .dateText {
+  color: var(--mainGrey);
+  font-size: 0.8rem;
+}
+.about p {
+  color: var(--mainGrey);
+  font-size: 0.9rem;
+  letter-spacing: var(--small-spacing);
+  line-height: var(--line-height);
+}
+@media screen and (min-width: 480px) {
+  .newsDetailMainSec .imgBx {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .newsDetailWrap {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .newsDetailMainSec .imgBx {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .newsDetailWrap {
+    width: var(--width);
+    margin-inline: var(--margin-inline);
+    max-width: 100%;
+  }
+  .newsDetailMainSec .imgBx {
+    height: 400px;
+  }
+}
