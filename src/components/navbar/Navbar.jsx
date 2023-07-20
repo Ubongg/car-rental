@@ -126,7 +126,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Link className={styles.signIn} href="/dashboard/login">
+        <Link className={styles.signIn} href="/dashboard">
           Sign In
         </Link>
       </div>
