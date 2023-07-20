@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { signOut, useSession } from "next-auth/react";
 
 const links = [
   {
@@ -39,6 +40,8 @@ const links = [
 ];
 
 const Navbar = () => {
+  const session = useSession();
+
   const [showLinks, setShowLinks] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
@@ -126,9 +129,16 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Link className={styles.signIn} href="/dashboard">
-          Sign In
-        </Link>
+        {session.status === "unauthenticated" && (
+          <Link className={styles.signIn} href="/dashboard">
+            Sign In
+          </Link>
+        )}
+        {session.status === "authenticated" && (
+          <Link className={styles.signIn} href="/dashboard" onClick={signOut}>
+            Sign Out
+          </Link>
+        )}
       </div>
     </div>
   );

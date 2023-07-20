@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import styles from "./page.module.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Background from "@/components/background/background";
 
 const Dashboard = () => {
   const session = useSession();
@@ -15,7 +16,11 @@ const Dashboard = () => {
     }
   }, [session.status]);
 
-  return <div>Dashboard</div>;
+  return (
+    <div className={styles.dashboard}>
+      <Background header="Dashboard" />
+    </div>
+  );
 };
 
 export default Dashboard;

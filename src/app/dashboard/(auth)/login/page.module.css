@@ -7,7 +7,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 150px var(--smallPadding);
+  padding: 70px var(--smallPadding) 0;
+  height: 100vh;
 }
 .loginWrap {
   max-width: 450px;
@@ -63,6 +64,7 @@
 .link {
   text-decoration: underline;
   color: var(--mainGrey);
+  text-align: center;
 }
 .link:hover {
   color: var(--blackGrey);
