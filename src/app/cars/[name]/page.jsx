@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./page.module.css";
 import DatePicker from "react-datepicker";
+import { useSession } from "next-auth/react";
+import useSWR from "swr";
 import "react-datepicker/dist/react-datepicker.css";
 import Background from "@/components/background/background";
 import Image from "next/image";
@@ -13,6 +15,7 @@ import {
   TiTick,
 } from "react-icons/ti";
 import { RiPinterestFill, RiInstagramLine } from "react-icons/ri";
+import Link from "next/link";
 
 const CarDetail = ({ params }) => {
   // replace '-' with ' ' in params and capitalize first letter of every word
@@ -30,6 +33,11 @@ const CarDetail = ({ params }) => {
   const [pickDate, setPickDate] = useState(new Date());
   const [dropDate, setDropDate] = useState(new Date());
 
+  // convert date to local string
+  const pickCarDate = pickDate.toLocaleString();
+  const dropCarDate = dropDate.toLocaleString();
+
+  // image slider
   const [slideOne, setSlideOne] = useState(true);
   const [slideTwo, setSlideTwo] = useState(false);
   const [slideThree, setSlideThree] = useState(false);
@@ -39,13 +47,40 @@ const CarDetail = ({ params }) => {
   const falseDate = (date) => new Date() < date;
   const returnDate = (date) => date > pickDate;
 
-  useEffect(() => {
-    const pickUpDate = pickDate.toLocaleString();
-    const dropOffDate = dropDate.toLocaleString();
-    console.log(pickUpDate);
-    console.log(dropOffDate);
-    console.log(params);
-  }, [pickDate, dropDate]);
+  const session = useSession();
+
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+  const { data, mutate, error, isLoading } = useSWR(
+    `/api/orders?username=${session?.data?.user.name}`,
+    fetcher
+  );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const pickUpLocation = e.target[0].value;
+    const dropOffLocation = e.target[1].value;
+    const pickUpDate = e.target[2].value;
+    const returnDate = e.target[3].value;
+
+    try {
+      await fetch("/api/orders", {
+        method: "POST",
+        body: JSON.stringify({
+          pickUpLocation,
+          dropOffLocation,
+          pickUpDate: pickCarDate,
+          returnDate: dropCarDate,
+          username: session.data.user.name,
+          carName: carName.join(" "),
+        }),
+      });
+      mutate();
+      e.target.reset();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className={styles.carDetail}>
@@ -267,43 +302,56 @@ const CarDetail = ({ params }) => {
             <p>Daily rate</p>
             <h2>$265</h2>
           </div>
-          <form className={styles.form}>
-            <h5>Book the {carName.join(" ")}</h5>
-            <label>Pick Up Location</label>
-            <input
-              type="text"
-              className={styles.input}
-              placeholder="Enter your pickup location"
-            />
-            <label>Drop Off Location</label>
-            <input
-              type="text"
-              className={styles.input}
-              placeholder="Enter your dropoff location"
-            />
-            <label>Pick Up Date & Time</label>
-            <DatePicker
-              showTimeSelect
-              filterDate={falseDate}
-              minTime={new Date(0, 0, 0, 9, 0)}
-              maxTime={new Date(0, 0, 0, 19, 0)}
-              selected={pickDate}
-              onChange={(pickDate) => setPickDate(pickDate)}
-              className={styles.input}
-            />
-            <label>Return Date & Time</label>
-            <DatePicker
-              showTimeSelect
-              filterDate={returnDate}
-              minTime={new Date(0, 0, 0, 9, 0)}
-              maxTime={new Date(0, 0, 0, 19, 0)}
-              selected={dropDate}
-              onChange={(dropDate) => setDropDate(dropDate)}
-              className={styles.input}
-            />
-            <button>Book Now</button>
-          </form>
-
+          {session.status === "authenticated" && (
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <h5>Book the {carName.join(" ")}</h5>
+              <label>Pick Up Location</label>
+              <input
+                type="text"
+                className={styles.input}
+                placeholder="Enter your pickup location"
+                required
+              />
+              <label>Drop Off Location</label>
+              <input
+                type="text"
+                className={styles.input}
+                placeholder="Enter your dropoff location"
+                required
+              />
+              <label>Pick Up Date & Time</label>
+              <DatePicker
+                showTimeSelect
+                filterDate={falseDate}
+                minTime={new Date(0, 0, 0, 9, 0)}
+                maxTime={new Date(0, 0, 0, 19, 0)}
+                selected={pickDate}
+                onChange={(pickDate) => setPickDate(pickDate)}
+                className={styles.input}
+                required
+              />
+              <label>Return Date & Time</label>
+              <DatePicker
+                showTimeSelect
+                filterDate={returnDate}
+                minTime={new Date(0, 0, 0, 9, 0)}
+                maxTime={new Date(0, 0, 0, 19, 0)}
+                selected={dropDate}
+                onChange={(dropDate) => setDropDate(dropDate)}
+                className={styles.input}
+                required
+              />
+              <button>Book Now</button>
+            </form>
+          )}
+          {session.status === "unauthenticated" && (
+            <div className={styles.loginToBook}>
+              <h5>Book the Bentley</h5>
+              <button>
+                <Link href="/dashboard">Sign in to Book</Link>
+              </button>
+            </div>
+          )}
           <div className={styles.share}>
             <div className={styles.header}>
               <h2>Share</h2>

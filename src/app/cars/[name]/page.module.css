@@ -118,7 +118,8 @@
   color: var(--blackGrey);
   letter-spacing: var(--spacing);
 }
-.form {
+.form,
+.loginToBook {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--lightGrey);
@@ -127,7 +128,8 @@
   box-shadow: var(--light-shadow);
   margin-bottom: 30px;
 }
-.form h5 {
+.form h5,
+.loginToBook h5 {
   font-size: 1.15rem;
   color: var(--blackGrey);
   margin-bottom: 20px;
@@ -150,7 +152,8 @@
   color: var(--blackGrey);
   letter-spacing: var(--small-spacing);
 }
-.form button {
+.form button,
+.loginToBook button {
   padding: 15px 0;
   background: var(--primaryColor);
   color: var(--mainWhite);
@@ -158,6 +161,14 @@
   font-size: 1rem;
   border-radius: var(--small-radius);
   margin-top: 10px;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.form button:hover {
+  background: var(--hoverColor);
+}
+.loginToBook button a {
+  color: var(--mainWhite);
 }
 .share {
   display: flex;
