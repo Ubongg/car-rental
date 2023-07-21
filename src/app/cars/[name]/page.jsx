@@ -15,15 +15,18 @@ import {
 import { RiPinterestFill, RiInstagramLine } from "react-icons/ri";
 
 const CarDetail = ({ params }) => {
+  // replace '-' with ' ' in params and capitalize first letter of every word
   let name = params.name;
   name = name.replace(/-/g, " ");
 
+  // turn string into an array
   let carName = name.split(" ");
 
   for (let i = 0; i < carName.length; i++) {
     carName[i] = carName[i][0].toUpperCase() + carName[i].substr(1);
   }
 
+  // setup pick up and drop off date
   const [pickDate, setPickDate] = useState(new Date());
   const [dropDate, setDropDate] = useState(new Date());
 
@@ -32,7 +35,9 @@ const CarDetail = ({ params }) => {
   const [slideThree, setSlideThree] = useState(false);
   const [slideFour, setSlideFour] = useState(false);
 
+  // can't pick dates before present date
   const falseDate = (date) => new Date() < date;
+  const returnDate = (date) => date > pickDate;
 
   useEffect(() => {
     const pickUpDate = pickDate.toLocaleString();
@@ -289,7 +294,7 @@ const CarDetail = ({ params }) => {
             <label>Return Date & Time</label>
             <DatePicker
               showTimeSelect
-              filterDate={falseDate}
+              filterDate={returnDate}
               minTime={new Date(0, 0, 0, 9, 0)}
               maxTime={new Date(0, 0, 0, 19, 0)}
               selected={dropDate}
@@ -298,27 +303,28 @@ const CarDetail = ({ params }) => {
             />
             <button>Book Now</button>
           </form>
-        </div>
-        <div className={styles.share}>
-          <div className={styles.header}>
-            <h2>Share</h2>
-          </div>
-          <div className={styles.socials}>
-            <span className={styles.icon}>
-              <TiSocialTwitter />
-            </span>
-            <span className={styles.icon}>
-              <TiSocialFacebook />
-            </span>
-            <span className={styles.icon}>
-              <TiSocialLinkedin />
-            </span>
-            <span className={styles.icon}>
-              <RiPinterestFill />
-            </span>
-            <span className={styles.icon}>
-              <RiInstagramLine />
-            </span>
+
+          <div className={styles.share}>
+            <div className={styles.header}>
+              <h2>Share</h2>
+            </div>
+            <div className={styles.socials}>
+              <span className={styles.icon}>
+                <TiSocialTwitter />
+              </span>
+              <span className={styles.icon}>
+                <TiSocialFacebook />
+              </span>
+              <span className={styles.icon}>
+                <TiSocialLinkedin />
+              </span>
+              <span className={styles.icon}>
+                <RiPinterestFill />
+              </span>
+              <span className={styles.icon}>
+                <RiInstagramLine />
+              </span>
+            </div>
           </div>
         </div>
       </div>
