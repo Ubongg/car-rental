@@ -346,7 +346,7 @@ const CarDetail = ({ params }) => {
           )}
           {session.status === "unauthenticated" && (
             <div className={styles.loginToBook}>
-              <h5>Book the Bentley</h5>
+              <h5>Book the {carName.join(" ")}</h5>
               <button>
                 <Link href="/dashboard">Sign in to Book</Link>
               </button>
