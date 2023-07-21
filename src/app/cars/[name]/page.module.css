@@ -1,0 +1,187 @@
+.carDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 var(--smallPadding);
+}
+.carDetailWrap {
+  max-width: 450px;
+  width: 100%;
+  padding: 90px 0 0;
+}
+.carDetailImages {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.carDetailBigImg {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  margin-bottom: 15px;
+}
+.smallImages {
+  display: flex;
+  width: 100%;
+  padding: 0 3px;
+  gap: 1.3rem;
+}
+.smallImg {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0.5;
+  background: transparent;
+  border-radius: var(--small-radius);
+}
+.active {
+  opacity: 1;
+  box-shadow: var(--dark-shadow);
+}
+.smallImg .img {
+  border-radius: var(--small-radius);
+}
+.active .img {
+  box-shadow: var(--dark-shadow);
+}
+.head h2 {
+  font-size: 1.5rem;
+  color: var(--blackGrey);
+  margin-bottom: 20px;
+}
+.head p {
+  color: var(--mainGrey);
+  margin-bottom: 30px;
+  line-height: var(--line-height);
+  letter-spacing: var(--small-spacing);
+}
+.specs {
+  margin-bottom: 30px;
+}
+.specs h2,
+.features h2 {
+  font-size: 1.15rem;
+  color: var(--blackGrey);
+  margin-bottom: 20px;
+}
+.spec {
+  display: flex;
+  border-bottom: 1px solid var(--lightGrey);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.spec .key {
+  color: var(--mainGrey);
+  flex: 1;
+}
+.spec .value {
+  color: var(--blackGrey);
+  flex: 1;
+}
+.features {
+  margin-bottom: 30px;
+}
+.feature {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 5px;
+}
+.feature .tick {
+  color: var(--primaryColor);
+  font-size: 1.2rem;
+}
+.feature .text {
+  color: var(--mainGrey);
+}
+.booking {
+  margin-bottom: 30px;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(240, 240, 240);
+  height: 140px;
+  border-radius: var(--small-radius);
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 0.3rem;
+}
+.price p {
+  font-size: 1.1rem;
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+}
+.price h2 {
+  font-size: 3rem;
+  color: var(--blackGrey);
+  letter-spacing: var(--spacing);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lightGrey);
+  border-radius: var(--small-radius);
+  padding: 30px;
+  box-shadow: var(--light-shadow);
+}
+.form h5 {
+  font-size: 1.15rem;
+  color: var(--blackGrey);
+  margin-bottom: 20px;
+  letter-spacing: var(--small-spacing);
+}
+.input {
+  border-radius: var(--small-radius);
+  outline: none;
+  padding: 10px 10px 12px;
+  border: 1px solid var(--mainGrey);
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+}
+.form label {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: var(--blackGrey);
+  letter-spacing: var(--small-spacing);
+}
+.form button {
+  padding: 15px 0;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border: none;
+  font-size: 1rem;
+  border-radius: var(--small-radius);
+  margin-top: 10px;
+}
+.share {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lightGrey);
+  border-radius: var(--small-radius);
+  padding: 30px;
+  margin-bottom: 70px;
+  box-shadow: var(--light-shadow);
+}
+.share .header h2 {
+  color: var(--blackGrey);
+  margin-bottom: 10px;
+  letter-spacing: var(--small-spacing);
+  font-size: 1.15rem;
+}
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
+.socials .icon {
+  padding: 8px 10px 6px;
+  background: var(--primaryColor);
+  font-size: 1.3rem;
+  color: var(--mainWhite);
+  cursor: pointer;
+  border-radius: var(--small-radius);
+}

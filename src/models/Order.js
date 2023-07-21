@@ -4,6 +4,10 @@ const { Schema } = mongoose;
 
 const orderSchema = new Schema(
   {
+    carName: {
+      type: String,
+      required: true,
+    },
     pickUpLocation: {
       type: String,
       required: true,
