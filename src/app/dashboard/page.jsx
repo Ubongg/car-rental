@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Background from "@/components/background/background";
+import useSWR from "swr";
 
 const Dashboard = () => {
   const session = useSession();
