@@ -20,7 +20,7 @@ const Login = ({ url }) => {
 
   useEffect(() => {
     if (session.status === "loading") {
-      return <p>Loading...</p>;
+      <p>Loading...</p>;
     }
 
     if (session.status === "authenticated") {
