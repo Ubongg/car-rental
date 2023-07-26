@@ -139,6 +139,10 @@
     font-size: 0.9rem;
     border-radius: var(--small-radius);
     font-weight: 600;
+    transition: var(--mainTransition);
+  }
+  .signIn:hover {
+    background: var(--hoverColor);
   }
 }
 /* @media screen and (min-width: 1200px) {

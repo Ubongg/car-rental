@@ -97,6 +97,10 @@
   display: flex;
   align-self: flex-start;
   cursor: pointer;
+  transition: var(--mainTransition);
+}
+.leaveComment form button:hover {
+  background: var(--hoverColor);
 }
 .header h2 {
   color: var(--blackGrey);

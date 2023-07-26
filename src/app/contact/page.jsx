@@ -137,6 +137,11 @@ const ContactWrap = styled.div`
       display: flex;
       align-self: flex-start;
       cursor: pointer;
+      transition: var(--mainTransition);
+
+      &:hover {
+        background: var(--hoverColor);
+      }
     }
   }
   .officeContact {
@@ -147,7 +152,7 @@ const ContactWrap = styled.div`
     div {
       border: 1px solid var(--lightGrey);
       border-radius: var(--small-radius);
-      box-shadow: var(--light-shadow);
+      box-shadow: 3px 3px 9px rgba(164, 164, 186, 0.2);
       padding: 30px 30px 50px;
       display: flex;
       flex-direction: column;

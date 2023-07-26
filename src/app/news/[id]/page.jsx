@@ -124,7 +124,7 @@ const NewsDetail = () => {
           </div>
           {comments.length > 0 && (
             <div className={styles.newsDetailCommentSec}>
-              <h2>Comments({comments.length})</h2>
+              <h2>Comments ({comments.length})</h2>
               <div className={styles.comments}>
                 {comments.map((comment) => {
                   const { id, name, text } = comment;

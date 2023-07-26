@@ -203,5 +203,10 @@ const DownText = styled.div`
     font-size: 0.8rem;
     font-weight: 600;
     border-radius: var(--small-radius);
+    transition: var(--mainTransition);
+
+    &:hover {
+      background: var(--hoverColor);
+    }
   }
 `;

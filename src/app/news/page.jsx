@@ -383,6 +383,11 @@ const NewsWrap = styled.div`
             font-size: 0.9rem;
             font-weight: 600;
             border-radius: var(--small-radius);
+            transition: var(--mainTransition);
+
+            &:hover {
+              background: var(--hoverColor);
+            }
           }
         }
       }
