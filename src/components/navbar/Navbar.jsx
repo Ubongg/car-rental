@@ -135,7 +135,7 @@ const Navbar = () => {
           </Link>
         )}
         {session.status === "authenticated" && (
-          <Link className={styles.signIn} href="/dashboard" onClick={signOut}>
+          <Link className={styles.signIn} href="" onClick={signOut}>
             Sign Out
           </Link>
         )}

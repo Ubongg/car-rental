@@ -73,6 +73,7 @@ const CarDetail = ({ params }) => {
           returnDate: dropCarDate,
           username: session.data.user.name,
           carName: carName.join(" "),
+          status: "scheduled",
         }),
       });
       mutate();
