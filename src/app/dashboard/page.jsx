@@ -20,6 +20,7 @@ const Dashboard = () => {
     fetcher
   );
 
+  // change status to 'completed' and update in db
   const completedStatus = async (id) => {
     try {
       await fetch(`/api/orders/${id}`, {
@@ -35,6 +36,7 @@ const Dashboard = () => {
     }
   };
 
+  // change status to 'cancelled' and update in db
   const cancelledStatus = async (id) => {
     try {
       await fetch(`/api/orders/${id}`, {
