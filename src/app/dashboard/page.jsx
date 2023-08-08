@@ -9,8 +9,6 @@ import useSWR from "swr";
 import Image from "next/image";
 
 const Dashboard = () => {
-  const [status, setStatus] = useState("scheduled");
-
   const session = useSession();
   const router = useRouter();
 
@@ -22,6 +20,36 @@ const Dashboard = () => {
     fetcher
   );
 
+  const completedStatus = async (id) => {
+    try {
+      await fetch(`/api/orders/${id}`, {
+        method: "PUT",
+        body: JSON.stringify({
+          ...data,
+          status: "completed",
+        }),
+      });
+      mutate();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const cancelledStatus = async (id) => {
+    try {
+      await fetch(`/api/orders/${id}`, {
+        method: "PUT",
+        body: JSON.stringify({
+          ...data,
+          status: "cancelled",
+        }),
+      });
+      mutate();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     if (session.status === "unauthenticated") {
       router?.push("/dashboard/login");
@@ -32,11 +60,50 @@ const Dashboard = () => {
     return (
       <div className={styles.dashboard}>
         <Background header="Dashboard" />
-        {data?.map((order) => {
-          if (order.status === "scheduled") {
-            return <p key={order._id}>{order.carName}</p>;
-          }
-        })}
+        <div className={styles.scheduled}>
+          <h2>Scheduled Orders</h2>
+          {data?.map((order) => {
+            if (order.status === "scheduled") {
+              return (
+                <div key={order._id}>
+                  <p>{order.carName}</p>
+                  <button onClick={() => completedStatus(order._id)}>
+                    Complete
+                  </button>
+                  <button onClick={() => cancelledStatus(order._id)}>
+                    cancel
+                  </button>
+                </div>
+              );
+            }
+          })}
+        </div>
+
+        <div className={styles.completed}>
+          <h2>Completed Orders</h2>
+          {data?.map((order) => {
+            if (order.status === "completed") {
+              return (
+                <div key={order._id}>
+                  <p>{order.carName}</p>
+                </div>
+              );
+            }
+          })}
+        </div>
+
+        <div className={styles.cancelled}>
+          <h2>Cancelled Orders</h2>
+          {data?.map((order) => {
+            if (order.status === "cancelled") {
+              return (
+                <div key={order._id}>
+                  <p>{order.carName}</p>
+                </div>
+              );
+            }
+          })}
+        </div>
       </div>
     );
   }
