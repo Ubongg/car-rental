@@ -14,50 +14,50 @@ const Cars = () => {
           body="SUV"
           name="Jeep Renegade"
           img="/assets/car1.jpeg"
-          price="$152"
+          price="$265"
         />
         <Car
           body="Exotic Car"
           name="Ferarri Enzo"
           img="/assets/car3.jpeg"
-          price="$152"
+          price="$167"
         />
         <Car
           body="Pickup Truck"
           name="Ford Raptor"
           img="/assets/car4.jpeg"
-          price="$152"
+          price="$147"
         />
         <Car
           body="Exotic Car"
           name="Chevrolet Camaro"
           img="/assets/car6.jpeg"
-          price="$152"
+          price="$245"
         />
         <Car
           body="Minivan"
           name="Hyundai Staria"
           img="/assets/car7.jpeg"
-          price="$152"
+          price="$299"
         />
         <Car
           body="Exotic Car"
           name="Bentley"
           img="/assets/car9.jpeg"
-          price="$152"
+          price="$131"
         />
         <Car body="Sedan" name="Lexus" img="/assets/car10.jpeg" price="$152" />
         <Car
-          body="SUVr"
+          body="SUV"
           name="Range Rover"
           img="/assets/car11.jpeg"
-          price="$152"
+          price="$228"
         />
         <Car
           body="Sedan"
           name="Mini Cooper"
           img="/assets/car12.jpeg"
-          price="$152"
+          price="$244"
         />
       </CarsWrap>
     </Container>
