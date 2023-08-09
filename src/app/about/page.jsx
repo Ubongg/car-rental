@@ -5,14 +5,15 @@ import styles from "./page.module.css";
 import Background from "@/components/background/background";
 import { useSpring, animated } from "@react-spring/web";
 import ScrollTrigger from "react-scroll-trigger";
-import { TiSocialFacebook } from "react-icons/ti";
-import { TiSocialTwitter } from "react-icons/ti";
-import { TiSocialLinkedin } from "react-icons/ti";
+import {
+  TiSocialFacebook,
+  TiSocialTwitter,
+  TiSocialLinkedin,
+} from "react-icons/ti";
 import { RiPinterestFill } from "react-icons/ri";
 import { BsTrophyFill } from "react-icons/bs";
 import { ImRoad } from "react-icons/im";
-import { FaMapPin } from "react-icons/fa";
-import { FaTag } from "react-icons/fa";
+import { FaMapPin, FaTag } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 

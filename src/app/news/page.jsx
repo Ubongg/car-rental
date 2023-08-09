@@ -5,9 +5,7 @@ import Background from "@/components/background/background";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import { FaUser } from "react-icons/fa";
-import { FaCalendarAlt } from "react-icons/fa";
-import { FaTags } from "react-icons/fa";
+import { FaUser, FaCalendarAlt, FaTags } from "react-icons/fa";
 
 const News = () => {
   return (

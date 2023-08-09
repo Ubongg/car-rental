@@ -4,13 +4,13 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { MdLocationPin } from "react-icons/md";
-import { RiPhoneFill } from "react-icons/ri";
 import { GoMail } from "react-icons/go";
-import { TiSocialFacebook } from "react-icons/ti";
-import { TiSocialTwitter } from "react-icons/ti";
-import { TiSocialLinkedin } from "react-icons/ti";
-import { RiPinterestFill } from "react-icons/ri";
-import { RiInstagramLine } from "react-icons/ri";
+import {
+  TiSocialFacebook,
+  TiSocialLinkedin,
+  TiSocialTwitter,
+} from "react-icons/ti";
+import { RiPinterestFill, RiInstagramLine, RiPhoneFill } from "react-icons/ri";
 
 const Footer = () => {
   return (
