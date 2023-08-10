@@ -1,0 +1,150 @@
+.dashboard {
+  padding: 0 var(--smallPadding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f5f8fa;
+}
+.dashboardWrap {
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 80px 0;
+}
+.profile {
+  background: var(--mainWhite);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 0 0;
+  border-radius: var(--small-radius);
+}
+.profile .imgBx {
+  font-size: 150px;
+  display: flex;
+  color: var(--lightGrey);
+  margin-bottom: 20px;
+}
+.profile .textBx {
+  margin-bottom: 30px;
+}
+.profile .textBx h5 {
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+  color: var(--blackGrey);
+  text-transform: capitalize;
+  letter-spacing: var(--small-spacing);
+}
+.profile .textBx p {
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+}
+.profile button {
+  display: flex;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 15px;
+  justify-content: center;
+  border: none;
+  background: var(--primaryColor);
+  cursor: pointer;
+  transition: var(--mainTransition);
+  color: var(--mainWhite);
+  font-size: 1rem;
+}
+.profile button .icon {
+  margin-top: 1px;
+}
+.profile button:hover {
+  background: var(--hoverColor);
+}
+.orders {
+  padding: 30px;
+  background: var(--mainWhite);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: var(--small-radius);
+  position: relative;
+}
+.orders h2 {
+  font-size: 1.15rem;
+  color: var(--blackGrey);
+  margin-bottom: 15px;
+}
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+.order p {
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+}
+.order .showDetails {
+  display: flex;
+  background: var(--primaryColor);
+  padding: 3px 6px;
+  color: var(--mainWhite);
+  border-radius: var(--small-radius);
+  transition: var(--mainTransition);
+  border: none;
+  cursor: pointer;
+}
+.order .showDetails a {
+  background: transparent;
+  color: var(--mainWhite);
+  font-size: 0.9rem;
+}
+.order .showDetails:hover,
+.complete:hover {
+  background: var(--hoverColor);
+}
+.statusButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+.complete,
+.cancel {
+  display: flex;
+  background: var(--primaryColor);
+  padding: 3px 6px;
+  color: var(--mainWhite);
+  border-radius: var(--small-radius);
+  transition: var(--mainTransition);
+  border: none;
+  cursor: pointer;
+}
+.cancel {
+  background: var(--light-red);
+}
+.cancel:hover {
+  background: var(--primary-red);
+}
+
+@media screen and (min-width: 768px) {
+  .dashboardWrap {
+    max-width: 650px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboardWrap {
+    width: var(--width);
+    margin-inline: var(--margin-inline);
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: flex-start;
+  }
+}
