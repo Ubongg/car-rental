@@ -105,7 +105,7 @@
 .order .showDetails a {
   background: transparent;
   color: var(--mainWhite);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 .order .showDetails:hover,
 .complete:hover {
@@ -125,6 +125,7 @@
   transition: var(--mainTransition);
   border: none;
   cursor: pointer;
+  font-size: 0.85rem;
 }
 .cancel {
   background: var(--light-red);
