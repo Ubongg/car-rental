@@ -191,15 +191,15 @@ export default function Home() {
               <p className={comfort ? styles.comfort : styles.comfortHide}>
                 We prioritize your comfort and convenience throughout your
                 journey. We understand that a comfortable ride can make a world
-                of difference, whether you're embarking on a business trip or
-                enjoying a leisurely vacation. That's why we offer a wide range
+                of difference, whether you are embarking on a business trip or
+                enjoying a leisurely vacation. That is why we offer a wide range
                 of well-maintained, comfortable cars that cater to your specific
                 needs.
               </p>
               <p className={prestige ? styles.prestige : styles.prestigeHide}>
-                We understand that prestige goes beyond luxury. It's about
+                We understand that prestige goes beyond luxury. It is about
                 making a statement, embracing sophistication, and indulging in
-                the finer things in life. That's why we offer an exclusive
+                the finer things in life. That is why we offer an exclusive
                 selection of prestigious cars that exude elegance, style, and
                 status.
               </p>

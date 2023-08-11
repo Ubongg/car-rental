@@ -95,7 +95,7 @@ const Navbar = () => {
     return () => {
       mounted.current = false;
     };
-  }, [mounted]);
+  }, [mounted, changeBackground]);
 
   return (
     <div className={navbar ? styles.containerActive : styles.container}>

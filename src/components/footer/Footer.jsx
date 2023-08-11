@@ -21,8 +21,8 @@ const Footer = () => {
           <p>
             Where quality meets affordability. We understand the importance of a
             smooth and enjoyable journey without the burden of excessive costs.
-            That's why we have meticulously crafted our offerings to provide you
-            with top-notch vehicles at minimum expense.
+            That is why we have meticulously crafted our offerings to provide
+            you with top-notch vehicles at minimum expense.
           </p>
         </div>
         <div className="links">

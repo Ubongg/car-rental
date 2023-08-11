@@ -26,7 +26,7 @@ const Login = ({ url }) => {
     if (session.status === "authenticated") {
       router?.push("/dashboard");
     }
-  }, [session.status]);
+  }, [session.status, router]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

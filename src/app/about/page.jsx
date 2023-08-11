@@ -53,7 +53,7 @@ const About = () => {
             quality, convenience, and customer satisfaction, we strive to make
             every rental experience a seamless and enjoyable one. We understand
             that every customer has unique needs and preferences when it comes
-            to renting a car. That's why we maintain a diverse fleet of
+            to renting a car. That is why we maintain a diverse fleet of
             well-maintained vehicles to cater to various requirements. From
             compact cars for solo travelers to spacious SUVs for families, we
             have a wide range of options to choose from.
@@ -332,15 +332,15 @@ const About = () => {
             <p className={comfort ? styles.comfort : styles.comfortHide}>
               We prioritize your comfort and convenience throughout your
               journey. We understand that a comfortable ride can make a world of
-              difference, whether you're embarking on a business trip or
-              enjoying a leisurely vacation. That's why we offer a wide range of
-              well-maintained, comfortable cars that cater to your specific
+              difference, whether you are embarking on a business trip or
+              enjoying a leisurely vacation. That is why we offer a wide range
+              of well-maintained, comfortable cars that cater to your specific
               needs.
             </p>
             <p className={prestige ? styles.prestige : styles.prestigeHide}>
-              We understand that prestige goes beyond luxury. It's about making
+              We understand that prestige goes beyond luxury. It is about making
               a statement, embracing sophistication, and indulging in the finer
-              things in life. That's why we offer an exclusive selection of
+              things in life. That is why we offer an exclusive selection of
               prestigious cars that exude elegance, style, and status.
             </p>
           </div>
