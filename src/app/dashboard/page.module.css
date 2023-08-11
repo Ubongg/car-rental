@@ -92,28 +92,25 @@
   color: var(--mainGrey);
   letter-spacing: var(--small-spacing);
 }
-.order .showDetails {
-  display: flex;
-  background: var(--primaryColor);
-  padding: 3px 6px;
-  color: var(--mainWhite);
-  border-radius: var(--small-radius);
-  transition: var(--mainTransition);
-  border: none;
-  cursor: pointer;
+.orderInfos {
+  border-bottom: 1px solid var(--lightGrey);
+  width: 100%;
 }
-.order .showDetails a {
-  background: transparent;
-  color: var(--mainWhite);
-  font-size: 0.85rem;
+.orderInfo p span {
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-transform: capitalize;
 }
-.order .showDetails:hover,
-.complete:hover {
-  background: var(--hoverColor);
+.orderInfo p {
+  margin-bottom: 10px;
+  color: var(--mainGrey);
+  letter-spacing: var(--small-spacing);
+  text-transform: capitalize;
 }
 .statusButtons {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin: 15px 0;
 }
 .complete,
 .cancel {
@@ -126,6 +123,9 @@
   border: none;
   cursor: pointer;
   font-size: 0.85rem;
+}
+.complete:hover {
+  background: var(--hoverColor);
 }
 .cancel {
   background: var(--light-red);

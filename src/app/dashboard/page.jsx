@@ -80,6 +80,7 @@ const Dashboard = () => {
               <span className={styles.text}>Sign Out</span>
             </button>
           </div>
+
           <div className={styles.orders}>
             <div className={styles.scheduled}>
               <h2>Scheduled Orders</h2>
@@ -87,24 +88,46 @@ const Dashboard = () => {
                 if (order.status === "scheduled") {
                   return (
                     <div key={order._id} className={styles.order}>
-                      <p>{order.carName}</p>
-                      <div className={styles.statusButtons}>
-                        <button
-                          onClick={() => completedStatus(order._id)}
-                          className={styles.complete}
-                        >
-                          Complete
-                        </button>
-                        <button
-                          onClick={() => cancelledStatus(order._id)}
-                          className={styles.cancel}
-                        >
-                          cancel
-                        </button>
+                      <div className={styles.orderInfos}>
+                        <div className={styles.orderInfo}>
+                          <p>
+                            <span>Order ID:</span> {order._id}
+                          </p>
+                          <p>
+                            <span>Car:</span> {order.carName}
+                          </p>
+                          <p>
+                            <span>Pick Up Location:</span>{" "}
+                            {order.pickUpLocation}
+                          </p>
+                        </div>
+                        <div className={styles.orderInfo}>
+                          <p>
+                            <span>Drop Off Location:</span>{" "}
+                            {order.dropOffLocation}
+                          </p>
+                          <p>
+                            <span>Pick Up Date:</span> {order.pickUpDate}
+                          </p>
+                          <p>
+                            <span>Return Date:</span> {order.returnDate}
+                          </p>
+                          <div className={styles.statusButtons}>
+                            <button
+                              onClick={() => completedStatus(order._id)}
+                              className={styles.complete}
+                            >
+                              Complete
+                            </button>
+                            <button
+                              onClick={() => cancelledStatus(order._id)}
+                              className={styles.cancel}
+                            >
+                              cancel
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <button className={styles.showDetails}>
-                        <Link href={`/dashboard/${order._id}`}>Details</Link>
-                      </button>
                     </div>
                   );
                 }
@@ -117,10 +140,32 @@ const Dashboard = () => {
                 if (order.status === "completed") {
                   return (
                     <div key={order._id} className={styles.order}>
-                      <p>{order.carName}</p>
-                      <button className={styles.showDetails}>
-                        <Link href={`/dashboard/${order._id}`}>Details</Link>
-                      </button>
+                      <div className={styles.orderInfos}>
+                        <div className={styles.orderInfo}>
+                          <p>
+                            <span>Order ID:</span> {order._id}
+                          </p>
+                          <p>
+                            <span>Car:</span> {order.carName}
+                          </p>
+                          <p>
+                            <span>Pick Up Location:</span>{" "}
+                            {order.pickUpLocation}
+                          </p>
+                        </div>
+                        <div className={styles.orderInfo}>
+                          <p>
+                            <span>Drop Off Location:</span>{" "}
+                            {order.dropOffLocation}
+                          </p>
+                          <p>
+                            <span>Pick Up Date:</span> {order.pickUpDate}
+                          </p>
+                          <p>
+                            <span>Return Date:</span> {order.returnDate}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   );
                 }
@@ -133,10 +178,32 @@ const Dashboard = () => {
                 if (order.status === "cancelled") {
                   return (
                     <div key={order._id} className={styles.order}>
-                      <p>{order.carName}</p>
-                      <button className={styles.showDetails}>
-                        <Link href={`/dashboard/${order._id}`}>Details</Link>
-                      </button>
+                      <div className={styles.orderInfos}>
+                        <div className={styles.orderInfo}>
+                          <p>
+                            <span>Order ID:</span> {order._id}
+                          </p>
+                          <p>
+                            <span>Car:</span> {order.carName}
+                          </p>
+                          <p>
+                            <span>Pick Up Location:</span>{" "}
+                            {order.pickUpLocation}
+                          </p>
+                        </div>
+                        <div className={styles.orderInfo}>
+                          <p>
+                            <span>Drop Off Location:</span>{" "}
+                            {order.dropOffLocation}
+                          </p>
+                          <p>
+                            <span>Pick Up Date:</span> {order.pickUpDate}
+                          </p>
+                          <p>
+                            <span>Return Date:</span> {order.returnDate}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   );
                 }
