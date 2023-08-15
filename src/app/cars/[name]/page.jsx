@@ -16,6 +16,7 @@ import {
 } from "react-icons/ti";
 import { RiPinterestFill, RiInstagramLine } from "react-icons/ri";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const CarDetail = ({ params }) => {
   // replace '-' with ' ' in params and capitalize first letter of every word
@@ -78,8 +79,9 @@ const CarDetail = ({ params }) => {
       });
       mutate();
       e.target.reset();
-    } catch (err) {
-      console.log(err);
+      toast.success("Order Created");
+    } catch (error) {
+      toast.error("Order Not Created");
     }
   };
 

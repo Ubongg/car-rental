@@ -8,7 +8,7 @@ import Background from "@/components/background/background";
 import useSWR from "swr";
 import { BiUserCircle } from "react-icons/bi";
 import { FaSignOutAlt } from "react-icons/fa";
-import Link from "next/link";
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const session = useSession();
@@ -33,8 +33,9 @@ const Dashboard = () => {
         }),
       });
       mutate();
-    } catch (err) {
-      console.log(err);
+      toast.success("Order Completed");
+    } catch (error) {
+      toast.error("Something went wrong");
     }
   };
 
@@ -49,8 +50,9 @@ const Dashboard = () => {
         }),
       });
       mutate();
-    } catch (err) {
-      console.log(err);
+      toast.success("Order Cancelled");
+    } catch (error) {
+      toast.error("Something went wrong");
     }
   };
 
