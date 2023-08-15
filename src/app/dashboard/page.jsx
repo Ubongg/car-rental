@@ -91,7 +91,7 @@ const Dashboard = () => {
                       <div className={styles.orderInfos}>
                         <div className={styles.orderInfo}>
                           <p>
-                            <span>Order ID:</span> {order._id}
+                            <span>Order ID:</span> {order._id.slice(0, 15)}
                           </p>
                           <p>
                             <span>Car:</span> {order.carName}
@@ -143,7 +143,7 @@ const Dashboard = () => {
                       <div className={styles.orderInfos}>
                         <div className={styles.orderInfo}>
                           <p>
-                            <span>Order ID:</span> {order._id}
+                            <span>Order ID:</span> {order._id.slice(0, 15)}
                           </p>
                           <p>
                             <span>Car:</span> {order.carName}
@@ -181,7 +181,7 @@ const Dashboard = () => {
                       <div className={styles.orderInfos}>
                         <div className={styles.orderInfo}>
                           <p>
-                            <span>Order ID:</span> {order._id}
+                            <span>Order ID:</span> {order._id.slice(0, 15)}
                           </p>
                           <p>
                             <span>Car:</span> {order.carName}

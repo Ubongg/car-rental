@@ -126,6 +126,9 @@ const FooterWrap = styled.div`
     color: var(--primaryColor);
     margin-top: 2px;
   }
+  .info .text {
+    color: var(--lightGrey);
+  }
   .linksList {
     display: flex;
     flex-direction: column;
