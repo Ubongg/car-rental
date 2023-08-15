@@ -47,9 +47,7 @@ const Footer = () => {
               <span className="icon">
                 <RiPhoneFill />
               </span>
-              <span className="text" style={{ color: "var(--lightGrey)" }}>
-                +234 8038038030
-              </span>
+              <span className="text">+234 8038038030</span>
             </div>
             <div className="info">
               <span className="icon">
@@ -127,9 +125,6 @@ const FooterWrap = styled.div`
   .info .icon {
     color: var(--primaryColor);
     margin-top: 2px;
-  }
-  .info .text {
-    color: var(--lightGrey);
   }
   .linksList {
     display: flex;
