@@ -47,7 +47,7 @@ const Footer = () => {
               <span className="icon">
                 <RiPhoneFill />
               </span>
-              <span className="text">+2348038038030</span>
+              <span className="text">+234 8038038030</span>
             </div>
             <div className="info">
               <span className="icon">
