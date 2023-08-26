@@ -13,6 +13,7 @@ import {
 } from "react-icons/ti";
 import { RiPinterestFill, RiInstagramLine } from "react-icons/ri";
 import { FaCalendarAlt } from "react-icons/fa";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 const replies = [
   {
@@ -80,6 +81,7 @@ const NewsDetail = () => {
 
   return (
     <div className={styles.newsDetail}>
+      <AutoLogout />
       <Background header="Enjoy Best Travel Experience" />
       <div className={styles.newsDetailWrap}>
         <div className={styles.newsDetailMain}>

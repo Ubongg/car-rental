@@ -9,6 +9,7 @@ import useSWR from "swr";
 import { BiUserCircle } from "react-icons/bi";
 import { FaSignOutAlt } from "react-icons/fa";
 import { toast } from "react-toastify";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 const Dashboard = () => {
   const session = useSession();
@@ -65,6 +66,7 @@ const Dashboard = () => {
   if (session.status === "authenticated") {
     return (
       <div className={styles.dashboard}>
+        <AutoLogout />
         <Background header="Dashboard" />
         <div className={styles.dashboardWrap}>
           <div className={styles.profile}>

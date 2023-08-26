@@ -1,5 +1,6 @@
 "use client";
 
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 import Background from "@/components/background/background";
 import Car from "@/components/car/Car";
 import React from "react";
@@ -8,6 +9,7 @@ import styled from "styled-components";
 const Cars = () => {
   return (
     <Container>
+      <AutoLogout />
       <Background header="Cars" />
       <CarsWrap>
         <Car

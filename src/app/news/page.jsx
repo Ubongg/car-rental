@@ -6,10 +6,12 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUser, FaCalendarAlt, FaTags } from "react-icons/fa";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 const News = () => {
   return (
     <Container>
+      <AutoLogout />
       <Background header="News" />
       <NewsWrap>
         <div className="newsList">

@@ -8,6 +8,7 @@ import { BsTrophyFill } from "react-icons/bs";
 import { ImRoad } from "react-icons/im";
 import { FaMapPin } from "react-icons/fa";
 import { useState } from "react";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 export default function Home() {
   const [luxury, setLuxury] = useState(true);
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <AutoLogout />
       <div className={styles.home}>
         <div className={styles.hero}>
           <div className={styles.heroWrap}>

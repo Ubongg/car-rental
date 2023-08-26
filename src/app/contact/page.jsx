@@ -6,10 +6,12 @@ import styled from "styled-components";
 import { MdLocationPin } from "react-icons/md";
 import { RiPhoneFill } from "react-icons/ri";
 import { GoMail } from "react-icons/go";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 const Contact = () => {
   return (
     <Container>
+      <AutoLogout />
       <Background header="Contact Us" />
       <ContactWrap>
         <form>

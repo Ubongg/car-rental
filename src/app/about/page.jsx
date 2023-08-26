@@ -16,6 +16,7 @@ import { ImRoad } from "react-icons/im";
 import { FaMapPin, FaTag } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -35,6 +36,7 @@ const About = () => {
 
   return (
     <div className={styles.about}>
+      <AutoLogout />
       <Background header="About" />
       <div className={styles.aboutWrap}>
         <div className={styles.aboutSec1}>

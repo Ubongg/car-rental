@@ -17,6 +17,7 @@ import {
 import { RiPinterestFill, RiInstagramLine } from "react-icons/ri";
 import Link from "next/link";
 import { toast } from "react-toastify";
+import AutoLogout from "@/components/AutoLogout/AutoLogout";
 
 const CarDetail = ({ params }) => {
   // replace '-' with ' ' in params and capitalize first letter of every word
@@ -87,6 +88,7 @@ const CarDetail = ({ params }) => {
 
   return (
     <div className={styles.carDetail}>
+      <AutoLogout />
       <Background header="Vehicle Fleet" />
       <div className={styles.carDetailWrap}>
         <div className={styles.carDetailImages}>
